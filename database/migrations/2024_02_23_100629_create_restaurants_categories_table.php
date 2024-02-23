@@ -11,9 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('resturants_categories', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('restaurants_categories', function (Blueprint $table) {
+
+            $table->unsignedBigInteger("restaurant_id")->nullable();
+            $table->foreign("restaurant_id")->references("id")->on("restaurants")->cascadeOnDelete();
+
+            $table->unsignedBigInteger("category_id")->nullable();
+            $table->foreign("category_id")->references("id")->on("categories")->cascadeOnDelete();
         });
     }
 
