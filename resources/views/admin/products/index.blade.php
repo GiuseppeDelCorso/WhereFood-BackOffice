@@ -10,7 +10,7 @@
                             <img src="{{asset("storage/".$product->image)}}" alt="{{ $product->name }}">
                             </div>
                         <div class="card-header">{{ $product->name }}</div>
-                        <div class="card-subtitle text-muted">{{$product->type ? $product->type->name : "Nessun tipo di prodotto";}}</div>
+                        <div class="card-body text-muted">{{$product->type ? $product->type->name : "Nessun tipo di prodotto";}}</div>
                         <div class="card-body">Ingredienti: {{ $product->ingredients }}</div>
                         <div class="card-body">Descrizione: {{ $product->description }}</div>
                         <div class="card-body">Prezzo: {{ $product->price }} €</div>
