@@ -32,6 +32,10 @@
 @endsection
 
 <style>
+    .card{
+        padding: 10px;
+        margin: 10px;
+    }
     .card-img{
         height: 350px;
         width: 200px;
