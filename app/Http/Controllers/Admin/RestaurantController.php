@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller; // Controller di base da importare
 use App\Models\Restaurant;
 use App\Http\Requests\StoreRestaurantRequest;
 use App\Http\Requests\UpdateRestaurantRequest;
+use App\Models\Category;
+use App\Models\Product;
 
 class RestaurantController extends Controller
 {
@@ -14,7 +16,6 @@ class RestaurantController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**

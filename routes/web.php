@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\RestaurantController; // <---- Importare il contr
 use App\Http\Controllers\Admin\CategoryController; // <---- Importare il controller da usare!!
 use App\Http\Controllers\Admin\OrderController; // <---- Importare il controller da usare!!
 use App\Http\Controllers\Admin\TypeController; // <---- Importare il controller da usare!!
+use App\Http\Controllers\Admin\ProductController; // <---- Importare il controller da usare!!
 /* ... */
 
 Route::get('/', function () {
@@ -24,6 +25,7 @@ Route::middleware(['auth'])
 
         Route::resource('restaurants', RestaurantController::class);
         Route::resource('categories', CategoryController::class);
+        Route::resource('products', ProductController::class);
         Route::resource('orders', OrderController::class);
         Route::resource('types', TypeController::class);
     });

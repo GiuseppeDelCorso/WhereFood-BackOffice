@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller; // Controller di base da importare
 use App\Models\Product;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
+use App\Models\Category;
+use App\Models\Restaurant;
+use App\Models\Type;
 
 class ProductController extends Controller
 {
@@ -14,7 +17,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $restaurants = Restaurant::all();
+        $products = Product::all();
+        $categories = Category::all();
+        return view("admin.products.index", compact("restaurants", "categories", "products"));
     }
 
     /**
@@ -22,7 +28,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $types = Type::all();
+        return view("admin.products.create", compact("types"));
     }
 
     /**
@@ -30,7 +37,17 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        //
+        $validated = $request->validated();
+
+        $newproduct = new Product();
+        $newproduct->fill($validated);
+        $newproduct->save();
+
+        if ($request->type) {
+            $newproduct->types()->attach($request->types);
+        }
+
+        return redirect()->route("admin.products.index");
     }
 
     /**
@@ -46,7 +63,8 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
-        //
+        $types = Type::all();
+        return view("admin.products.edit", compact("types", "product"));
     }
 
     /**
@@ -54,7 +72,20 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-        //
+        $validated = $request->validated();
+
+        $product->fill($validated);
+        $product->update();
+        if ($request->filled("types")) {
+            $validated["types"] = array_filter($validated["types"]) ? $validated["types"] : [];
+            $product->types()->sync($validated["types"]);
+        }
+
+        // if ($request->tags) {
+        //     $event->tags()->attach($request->tags);
+        // }
+
+        return redirect()->route("admin.products.index");
     }
 
     /**
@@ -62,6 +93,8 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        $product->delete();
+
+        return redirect()->route("admin.products.index");
     }
 }

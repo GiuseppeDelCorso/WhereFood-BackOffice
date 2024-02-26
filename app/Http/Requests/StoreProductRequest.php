@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use League\Flysystem\Visibility;
 
 class StoreProductRequest extends FormRequest
 {
@@ -11,7 +12,7 @@ class StoreProductRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +23,14 @@ class StoreProductRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            "name" => "required|max:50",
+            "image" => "required|max:100",
+            "ingredients" => "required|min:1",
+            "description" => "required|min:1",
+            "type_id" => "required",
+            "price" => "required",
+            "visibility" => "required",
+
         ];
     }
 }
