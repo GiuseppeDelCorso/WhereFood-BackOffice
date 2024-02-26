@@ -6,7 +6,9 @@
             @foreach ($products as $product)
                 <div class="col-md-4">
                     <div class="card">
-                        <div class="card-img">{{ $product->image }}</div>
+                        <div class="card-img">
+                            <img src={{ $product->image }} alt="">
+                            </div>
                         <div class="card-header">{{ $product->name }}</div>
                         <div class="card-subtitle text-muted">{{$product->type ? $product->type->name : "Nessun tipo di prodotto";}}</div>
                         <div class="card-body">Ingredienti: {{ $product->ingredients }}</div>
