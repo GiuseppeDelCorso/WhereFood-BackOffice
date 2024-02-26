@@ -19,9 +19,9 @@ class Product extends Model
     ];
 
     use HasFactory;
-    public function types()
+    public function type()
     {
-        return $this->belongsToMany(Type::class);
+        return $this->belongsTo(Type::class);
     }
     public function orders()
     {
