@@ -7,7 +7,7 @@
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-img">
-                            <img src={{ $product->image }} alt="">
+                            <img src="{{asset("storage/".$product->image)}}" alt="{{ $product->name }}">
                             </div>
                         <div class="card-header">{{ $product->name }}</div>
                         <div class="card-subtitle text-muted">{{$product->type ? $product->type->name : "Nessun tipo di prodotto";}}</div>
@@ -30,3 +30,15 @@
         </div>
     </div>
 @endsection
+
+<style>
+    .card-img{
+        height: 350px;
+        width: 200px;
+    }
+    .card-img img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain
+    }
+</style>
