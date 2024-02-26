@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin; // era "App\Http\Controllers"
+use App\Http\Controllers\Controller; // Controller di base da importare
 
-use App\Models\Restaurant;
-use App\Http\Requests\StoreRestaurantRequest;
-use App\Http\Requests\UpdateRestaurantRequest;
+use App\Models\Product;
+use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 
-class RestaurantController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +28,7 @@ class RestaurantController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreRestaurantRequest $request)
+    public function store(StoreProductRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class RestaurantController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Restaurant $restaurant)
+    public function show(Product $product)
     {
         //
     }
@@ -43,7 +44,7 @@ class RestaurantController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Restaurant $restaurant)
+    public function edit(Product $product)
     {
         //
     }
@@ -51,7 +52,7 @@ class RestaurantController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRestaurantRequest $request, Restaurant $restaurant)
+    public function update(UpdateProductRequest $request, Product $product)
     {
         //
     }
@@ -59,7 +60,7 @@ class RestaurantController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Restaurant $restaurant)
+    public function destroy(Product $product)
     {
         //
     }

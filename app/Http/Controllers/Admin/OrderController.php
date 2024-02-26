@@ -1,6 +1,7 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin; // era "App\Http\Controllers"
+use App\Http\Controllers\Controller; // Controller di base da importare
 
 use App\Models\Order;
 use App\Http\Requests\StoreOrderRequest;
