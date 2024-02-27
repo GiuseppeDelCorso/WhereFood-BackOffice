@@ -40,7 +40,8 @@ class ProductController extends Controller
     {
         $validated = $request->validated();
         $percorso = Storage::disk("public")->put('/img/products', $request['image']);
-        $validati["image"] = $percorso;
+        $validated["image"] = $percorso;
+
         $newproduct = new Product();
         $newproduct->fill($validated);
         $newproduct->save();
@@ -75,8 +76,7 @@ class ProductController extends Controller
     public function update(UpdateProductRequest $request, Product $product)
     {
 
-        $data =  $request->validated();
-
+        $dati_validati = $request->validated();
         if ($request->hasFile("image")) {
 
             if ($product->image) {
@@ -90,7 +90,7 @@ class ProductController extends Controller
         if ($request->type) {
             $product->type()->sync($request->type);
         }
-        $product->update($data);
+        $product->update($dati_validati);
 
 
         // if ($request->tags) {

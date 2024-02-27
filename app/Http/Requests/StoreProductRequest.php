@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use League\Flysystem\Visibility;
+use Illuminate\Validation\Rules\File;
 
 class StoreProductRequest extends FormRequest
 {
@@ -24,7 +24,7 @@ class StoreProductRequest extends FormRequest
     {
         return [
             "name" => "required|max:50",
-            "image" => "required|max:100",
+            "image" => ["required", File::image()->max("2mb")],
             "ingredients" => "required|min:1",
             "description" => "required|min:1",
             "type_id" => "required",
