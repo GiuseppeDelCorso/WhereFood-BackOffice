@@ -39,7 +39,7 @@ class ProductController extends Controller
     public function store(StoreProductRequest $request)
     {
         $validated = $request->validated();
-        $percorso = Storage::disk("public")->put('/uploads', $request['image']);
+        $percorso = Storage::disk("public")->put('/img/products', $request['image']);
         $validati["image"] = $percorso;
         $newproduct = new Product();
         $newproduct->fill($validated);
@@ -83,7 +83,7 @@ class ProductController extends Controller
 
                 Storage::disk("public")->delete($product->image);
             }
-            $percorso = Storage::disk("public")->put('/uploads', $request['image']);
+            $percorso = Storage::disk("public")->put('/img/products', $request['image']);
             $dati_validati["image"] = $percorso;
         }
 
