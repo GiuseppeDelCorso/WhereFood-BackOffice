@@ -18,7 +18,13 @@
                         <div class="card-body">Ingredienti: {{ $product->ingredients }}</div>
                         <div class="card-body">Descrizione: {{ $product->description }}</div>
                         <div class="card-body">Prezzo: {{ $product->price }} €</div>
-                        <div class="card-body">Visibile: {{ $product->visibility }}</div>
+                        <div class="card-body">Visibile:
+                            @if($product->visibility == 1)
+                                Si
+                            @else
+                                Nascosto
+                            @endif
+                        </div>
                         <div class="buttons d-flex justify-content-between">
                             <div>
                                 <a type="button" class="btn btn-success" href="{{ route('admin.products.edit', $product->id) }}">Modifica</a>

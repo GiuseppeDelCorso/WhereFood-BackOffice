@@ -43,6 +43,7 @@ class ProductController extends Controller
         $validated["image"] = $percorso;
 
         $newproduct = new Product();
+        $newproduct->visibility = $request->has('visibility');
         $newproduct->fill($validated);
         $newproduct->save();
 
@@ -77,6 +78,9 @@ class ProductController extends Controller
     {
 
         $dati_validati = $request->validated();
+
+        $dati_validati->visibility = $request->has('visibility');
+
         if ($request->hasFile("image")) {
 
             if ($product->image) {

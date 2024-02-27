@@ -29,7 +29,7 @@ class StoreProductRequest extends FormRequest
             "description" => "required|min:1",
             "type_id" => "required",
             "price" => "required",
-            "visibility" => "required",
+            "visibility" => "",
 
         ];
     }

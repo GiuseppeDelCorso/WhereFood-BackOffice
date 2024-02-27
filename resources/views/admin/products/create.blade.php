@@ -67,13 +67,10 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-                <div class="mb-3">
-                    <label for="visibility" class="form-label">Visibilità</label>
-                    <input type="text" class="form-control @error('visibility') is-invalid @enderror id="visibility"
-                        name="visibility" value="{{ old('visibility') }}">
-                    @error('visibility')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
+                <div class="mb-3 form-check">
+                    <input type="checkbox" name="visibility" id="visibility" value="1"
+                        {{ old('visibility') ? 'checked' : '' }}>
+                    <label for="visibility">Visibile</label>
                 </div>
                 <button type="submit" class="btn btn-primary">Aggiungi</button>
             </form>
