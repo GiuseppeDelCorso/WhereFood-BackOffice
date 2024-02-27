@@ -78,6 +78,9 @@
                     @enderror
                 </div>
                 <button type="submit" class="btn btn-primary">Aggiungi</button>
+                <button type="submit" class="btn btn-outline-primary">
+                    <a href="{{ route('admin.products.index') }}">Torna alla lista</a>
+                </button>
             </form>
         </div>
     </div>

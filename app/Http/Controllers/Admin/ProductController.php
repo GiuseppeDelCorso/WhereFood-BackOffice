@@ -9,6 +9,7 @@ use App\Http\Requests\UpdateProductRequest;
 use App\Models\Category;
 use App\Models\Restaurant;
 use App\Models\Type;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -38,7 +39,8 @@ class ProductController extends Controller
     public function store(StoreProductRequest $request)
     {
         $validated = $request->validated();
-
+        $percorso = Storage::disk("public")->put('/uploads', $request['image']);
+        $validati["image"] = $percorso;
         $newproduct = new Product();
         $newproduct->fill($validated);
         $newproduct->save();
@@ -72,14 +74,24 @@ class ProductController extends Controller
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
-        $validated = $request->validated();
 
-        $product->fill($validated);
-        $product->update();
-        if ($request->filled("types")) {
-            $validated["types"] = array_filter($validated["types"]) ? $validated["types"] : [];
-            $product->types()->sync($validated["types"]);
+        $data =  $request->validated();
+
+        if ($request->hasFile("image")) {
+
+            if ($product->image) {
+
+                Storage::disk("public")->delete($product->image);
+            }
+            $percorso = Storage::disk("public")->put('/uploads', $request['image']);
+            $dati_validati["image"] = $percorso;
         }
+
+        if ($request->type) {
+            $product->type()->sync($request->type);
+        }
+        $product->update($data);
+
 
         // if ($request->tags) {
         //     $event->tags()->attach($request->tags);
