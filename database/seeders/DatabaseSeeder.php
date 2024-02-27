@@ -6,6 +6,7 @@ use App\Models\Restaurant;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
+
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -20,7 +21,8 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             RestaurantSeeder::class,
             TypeSeeder::class,
-            ProductSeeder::class
+            ProductSeeder::class,
+            CategoryRestaurantSeeder::class
         ]);
     }
 }
