@@ -71,7 +71,9 @@
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" name="visibility" id="visibility" value="1"
-                        {{ old('visibility') ? 'checked' : '' }}>
+                    @if($product->visibility) checked @endif
+                    >
+                        
                     <label for="visibility">Visibile</label>
                 </div>
                 <button type="submit" class="btn btn-primary">Aggiungi</button>
