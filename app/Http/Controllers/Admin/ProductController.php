@@ -10,6 +10,7 @@ use App\Models\Category;
 use App\Models\Restaurant;
 use App\Models\Type;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
@@ -19,8 +20,9 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $restaurantId = Auth::user()->id;
-        $products = Product::where('restaurant_id', auth()->user()->id)->get();
+        $loggeduser = Auth::user()->id;
+        $restaurant_id = DB::table('restaurants')->where('user_id', $loggeduser)->value('id');
+        $products = Product::where('restaurant_id', $restaurant_id)->get();
         $categories = Category::all();
         return view("admin.products.index", compact("categories", "products"));
     }
@@ -43,8 +45,9 @@ class ProductController extends Controller
         $percorso = Storage::disk("public")->put('/img/products', $request['image']);
         $validated["image"] = $percorso;
 
+        $loggeduser = Auth::user()->id;
         $newproduct = new Product();
-        $newproduct->restaurant_id = Auth::user()->id;
+        $newproduct->restaurant_id = DB::table('restaurants')->where('user_id', $loggeduser)->value('id');
         $newproduct->visibility = $request->has('visibility');
         $newproduct->fill($validated);
         $newproduct->save();
