@@ -6,7 +6,7 @@ $users = [
   ],
   [
     'name' => 'Anna',
-    'email' => 'burgerKing@gmail.it',
+    'email' => 'burgerking@gmail.it',
   ],
   [
     'name' => 'Luigi',
