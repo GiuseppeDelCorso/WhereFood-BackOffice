@@ -53,6 +53,11 @@
                                     <i class="fa-solid fa-plus fa-lg fa-fw"></i> Nuovo prodotto
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.orders.index' ? 'bg-secondary' : '' }}" href="{{route('admin.orders.index')}}">
+                                    <i class="fa-solid fa-cart-arrow-down fa-lg fa-fw"></i> Dettagli Ordine
+                                </a>
+                            </li>
 
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">

@@ -19,12 +19,6 @@ class RestaurantFactory extends Factory
 
     public function definition(): array
     {
-        return [
-            "user_id" => 1,
-            "name" => $this->faker->unique()->word,
-            "image" => $this->faker->unique()->word,
-            "address" => $this->faker->unique()->word,
-            "PIVA" => $this->faker->unique()->word,
-        ];
+        return [];
     }
 }

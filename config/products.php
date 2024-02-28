@@ -8,7 +8,8 @@ $products = [
     'description' => 'Una pietanza romana a base di spaghetti, uova, pancetta e formaggio.',
     'type_id' => 1,
     'price' => '12.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 9
   ],
   [
     'name' => 'Pizza Margherita',
@@ -17,7 +18,8 @@ $products = [
     'description' => 'Una classica pizza italiana con pomodoro, mozzarella e basilico.',
     'type_id' => 4,
     'price' => '10.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 3
   ],
   [
     'name' => 'Sushi Misto',
@@ -26,7 +28,8 @@ $products = [
     'description' => 'Una selezione di sushi con pesce crudo assortito e riso.',
     'type_id' => 1,
     'price' => '15.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 7
   ],
   [
     'name' => 'Curry di Pollo',
@@ -35,7 +38,8 @@ $products = [
     'description' => 'Un piatto indiano speziato a base di pollo e curry.',
     'type_id' => 2,
     'price' => '11.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 6
   ],
   [
     'name' => 'Hamburger con Patatine',
@@ -44,7 +48,8 @@ $products = [
     'description' => 'Un classico hamburger con formaggio e patatine fritte.',
     'type_id' => 5,
     'price' => '9.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 3
   ],
   [
     'name' => 'Pollo alla Kung Pao',
@@ -53,7 +58,8 @@ $products = [
     'description' => 'Un piatto cinese piccante con pollo, peperoncino e arachidi.',
     'type_id' => 2,
     'price' => '13.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 4
   ],
   [
     'name' => 'Insalata Greca',
@@ -62,7 +68,8 @@ $products = [
     'description' => 'Un\'insalata fresca con ingredienti tipici della cucina greca.',
     'type_id' => 2,
     'price' => '8.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 5
   ],
   [
     'name' => 'Taco Messicano',
@@ -71,7 +78,8 @@ $products = [
     'description' => 'Un taco tradizionale con carne macinata, verdure e salsa.',
     'type_id' => 2,
     'price' => '7.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 7
   ],
   [
     'name' => 'Salmone alla Griglia',
@@ -80,7 +88,8 @@ $products = [
     'description' => 'Salmone fresco grigliato con una spruzzata di limone.',
     'type_id' => 2,
     'price' => '16.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 13
   ],
   [
     'name' => 'Calzone Ripieno',
@@ -89,7 +98,9 @@ $products = [
     'description' => 'Un calzone ripieno con prosciutto cotto, funghi e mozzarella.',
     'type_id' => 4,
     'price' => '14.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 12
+
   ],
   [
     'name' => 'Risotto ai Funghi',
@@ -98,7 +109,9 @@ $products = [
     'description' => 'Un risotto cremoso con funghi porcini e un tocco di vino bianco.',
     'type_id' => 2,
     'price' => '13.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 1
+
   ],
   [
     'name' => 'Burrito Messicano',
@@ -107,7 +120,9 @@ $products = [
     'description' => 'Un burrito farcito con carne di manzo, riso, fagioli e formaggio.',
     'type_id' => 5,
     'price' => '10.49',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 7
+
   ],
   [
     'name' => 'Tagliatelle al Tartufo',
@@ -116,7 +131,8 @@ $products = [
     'description' => 'Tagliatelle fresche condite con tartufo nero e panna.',
     'type_id' => 2,
     'price' => '18.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 1
   ],
   [
     'name' => 'Pad Thai',
@@ -125,7 +141,8 @@ $products = [
     'description' => 'Una famosa pietanza thailandese con tagliatelle di riso e ingredienti vari.',
     'type_id' => 1,
     'price' => '11.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 9
   ],
   [
     'name' => 'Caesar Salad',
@@ -134,7 +151,9 @@ $products = [
     'description' => 'Un\'insalata classica con dressing Caesar, crostini e parmigiano.',
     'type_id' => 2,
     'price' => '8.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 2
+
   ],
   [
     'name' => 'Cheesesteak Sandwich',
@@ -143,7 +162,8 @@ $products = [
     'description' => 'Un sandwich americano con bistecca tritata e formaggio fuso.',
     'type_id' => 5,
     'price' => '9.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 2
   ],
   [
     'name' => 'Pasta Primavera',
@@ -152,7 +172,8 @@ $products = [
     'description' => 'Una pasta primaverile con verdure fresche e un tocco di prezzemolo.',
     'type_id' => 1,
     'price' => '10.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 1
   ],
   [
     'name' => 'Gelato alla Fragola',
@@ -161,7 +182,8 @@ $products = [
     'description' => 'Un delizioso gelato alla fragola fatto in casa con fragole fresche.',
     'type_id' => 6,
     'price' => '5.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 14
   ],
   [
     'name' => 'Fettuccine Alfredo',
@@ -170,7 +192,8 @@ $products = [
     'description' => 'Una pasta cremosa con salsa Alfredo a base di panna e formaggio.',
     'type_id' => 1,
     'price' => '12.49',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 1
   ],
   [
     'name' => 'Maki Sushi',
@@ -179,7 +202,8 @@ $products = [
     'description' => 'Rotolini di sushi con tonno, avocado e cetriolo, serviti con salsa teriyaki.',
     'type_id' => 1,
     'price' => '14.99',
-    'visibility' => true
+    'visibility' => true,
+    'restaurant_id' => 4
   ]
 ];
 return ($products);
