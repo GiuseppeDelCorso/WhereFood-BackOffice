@@ -44,6 +44,7 @@ class ProductController extends Controller
         $validated["image"] = $percorso;
 
         $newproduct = new Product();
+        $newproduct->restaurant_id = Auth::user()->id;
         $newproduct->visibility = $request->has('visibility');
         $newproduct->fill($validated);
         $newproduct->save();
@@ -80,7 +81,6 @@ class ProductController extends Controller
 
         $dati_validati = $request->validated();
 
-        $dati_validati->visibility = $request->has('visibility');
 
         if ($request->hasFile("image")) {
 
@@ -95,6 +95,9 @@ class ProductController extends Controller
         if ($request->type) {
             $product->type()->sync($request->type);
         }
+
+        $product->visibility = $request->has('visibility');
+
         $product->update($dati_validati);
 
 
