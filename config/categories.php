@@ -32,6 +32,21 @@ $categories = [
         'image' => 'img/categories/indian.png'
     ],
     [
+        'name' => 'Messicano',
+        'description' => 'Messicano',
+        'image' => 'img/categories/Messican.png'
+    ],
+    [
+        'name' => 'Turco',
+        'description' => 'Turco',
+        'image' => 'img/categories/Turkish.png'
+    ],
+    [
+        'name' => 'Thai',
+        'description' => 'Thai',
+        'image' => 'img/categories/Thai.png'
+    ],
+    [
         'name' => 'Giapponese',
         'description' => 'giapponese',
         'image' => 'img/categories/japanese.png'
@@ -50,6 +65,11 @@ $categories = [
         'name' => 'Pesce',
         'description' => 'pesce',
         'image' => 'img/categories/seafood.png'
-    ]
+    ],
+    [
+        'name' => 'Gelato',
+        'description' => 'Gelato',
+        'image' => 'img/categories/Gelato.png'
+    ],
 ];
 return ($categories);

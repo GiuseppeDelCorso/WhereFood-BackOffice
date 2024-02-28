@@ -17,6 +17,13 @@ $restaurants = [
   ],
   [
     'user_id' => 1,
+    'name' => 'FiveGuys',
+    'image' => 'immagine_FiveGuys',
+    'address' => 'Via Alessandria 2',
+    'PIVA' => '90214930960'
+  ],
+  [
+    'user_id' => 1,
     'name' => 'Pizzeria da Gigi',
     'image' => 'immagine_pizzeriagigi',
     'address' => 'Piazza Roma 45',
@@ -31,8 +38,36 @@ $restaurants = [
   ],
   [
     'user_id' => 1,
-    'name' => 'La taverna del pescatore',
+    'name' => 'La Taverna Del Pescatore',
     'image' => 'immagine_tavernapescatore',
+    'address' => 'Viale Quarta 98',
+    'PIVA' => '19814981944'
+  ],
+  [
+    'user_id' => 1,
+    'name' => 'Il Taco da Tuco',
+    'image' => 'immagine_Il Taco_da_Tuco',
+    'address' => 'Viale Quarta 98',
+    'PIVA' => '19814981944'
+  ],
+  [
+    'user_id' => 1,
+    'name' => 'la Gelateria',
+    'image' => 'immagine_la_gelateria',
+    'address' => 'Viale Quarta 98',
+    'PIVA' => '19814981944'
+  ],
+  [
+    'user_id' => 1,
+    'name' => 'Kebab Di Gaza',
+    'image' => 'immagine_Kebab_Di_Gaza',
+    'address' => 'Viale Quarta 98',
+    'PIVA' => '19814981944'
+  ],
+  [
+    'user_id' => 1,
+    'name' => ' Evriday Thai',
+    'image' => 'immagine_Evriday_thai',
     'address' => 'Viale Quarta 98',
     'PIVA' => '19814981944'
   ],
@@ -56,6 +91,13 @@ $restaurants = [
     'image' => 'immagine_piccapane',
     'address' => 'Viale del Salento 21',
     'PIVA' => '55524981575'
+  ],
+  [
+    'user_id' => 1,
+    'name' => 'Ristorante Cor di zia',
+    'image' => 'immagine_cor di zia',
+    'address' => 'Viale abrosia',
+    'PIVA' => '56524982573'
   ],
 ];
 return ($restaurants);
