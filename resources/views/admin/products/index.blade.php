@@ -3,6 +3,12 @@
 @section('content')
     <div class="container-fluid mt-4">
         <div class="row justify-content-center">
+
+         {{--    @php
+                var_dump($restaurant_id);
+            @endphp --}}
+
+
             {{-- Crea card per prodotti --}}
             @foreach ($products as $product)
                 <div class="col-md-4">

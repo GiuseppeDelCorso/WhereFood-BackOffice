@@ -9,6 +9,7 @@ use App\Http\Requests\UpdateProductRequest;
 use App\Models\Category;
 use App\Models\Restaurant;
 use App\Models\Type;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
@@ -18,10 +19,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $restaurants = Restaurant::all();
-        $products = Product::all();
+        $restaurantId = Auth::user()->id;
+        $products = Product::where('restaurant_id', auth()->user()->id)->get();
         $categories = Category::all();
-        return view("admin.products.index", compact("restaurants", "categories", "products"));
+        return view("admin.products.index", compact("categories", "products"));
     }
 
     /**
