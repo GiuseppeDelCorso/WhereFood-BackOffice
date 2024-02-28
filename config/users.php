@@ -35,6 +35,26 @@ $users = [
   [
     'name' => 'Carmela',
     'email' => 'ristorantecordizia@gmail.it',
-  ]
+  ],
+  [
+    'name' => 'Manuel',
+    'email' => 'iltacodatuco@gmail.it',
+  ],
+  [
+    'name' => 'Graziella',
+    'email' => 'lagelateria@gmail.it',
+  ],
+  [
+    'name' => 'Redian',
+    'email' => 'kebabdigaza@gmail.it',
+  ],
+  [
+    'name' => 'Sjhong',
+    'email' => 'evridaythai@gmail.it',
+  ],
+  [
+    'name' => 'Jasmine',
+    'email' => 'fiveguys@gmail.it',
+  ],
 ];
 return ($users);
