@@ -56,6 +56,12 @@
                             </li>
 
                             <li class="nav-item">
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.restaurants.index' ? 'bg-secondary' : '' }}" href="{{route('admin.restaurants.index')}}">
+                                    <i class="fa-solid fa-utensils"></i> Ristorante
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
                                 <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.products.index' ? 'bg-secondary' : '' }}" href="{{route('admin.products.index')}}">
                                     <i class="fa-solid fa-burger fa-lg fa-fw"></i> Prodotti
                                 </a>

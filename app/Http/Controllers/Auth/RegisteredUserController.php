@@ -44,6 +44,10 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
+
+        //crea ristorante con id x autoincrementale
+
+        
         Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);

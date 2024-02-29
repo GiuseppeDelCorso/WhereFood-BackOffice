@@ -8,6 +8,7 @@ use App\Http\Requests\StoreRestaurantRequest;
 use App\Http\Requests\UpdateRestaurantRequest;
 use App\Models\Category;
 use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
 
 class RestaurantController extends Controller
 {
@@ -16,6 +17,9 @@ class RestaurantController extends Controller
      */
     public function index()
     {
+        $loggeduser = Auth::user()->id;
+        $restaurant = Restaurant::where('user_id', $loggeduser)->first(); //con "first" evitiamo di passare alla vista una collection
+        return view('admin.restaurant.index', compact('restaurant'));
     }
 
     /**
