@@ -1,6 +1,6 @@
 <?php
 
-$custumers = [
+$customers = [
     [
         'customer_name' => 'Alice',
         'customer_surname' => 'Smith',
@@ -59,4 +59,4 @@ $custumers = [
     ]
 ];
 
-return ($custumers);
+return ($customers);
