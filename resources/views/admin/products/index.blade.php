@@ -9,7 +9,6 @@
                     <div class="card bgCard">
                         <div class="card-header d-flex justify-content-between">
                             <h4>{{ $product->name }}</h4>
-                            <a type="button" class="btn btn-primary" href="{{ route('admin.products.show', $product->id) }}">Dettagli</a>
                         </div>
                         <div class="card-img">
                             <img src="{{asset("storage/".$product->image)}}" alt="{{ $product->name }}">
