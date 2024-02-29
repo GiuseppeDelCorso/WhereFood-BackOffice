@@ -13,11 +13,11 @@ class OrderSeeder extends Seeder
      */
     public function run(): void
     {
-        $customers = config('customers');
+        $orders = config('orders');
 
-        foreach ($customers as $customer) {
+        foreach ($orders as $order) {
             $newRestaurant = new Order();
-            $newRestaurant->fill($customer)->save();
+            $newRestaurant->fill($order)->save();
         };
     }
 }
