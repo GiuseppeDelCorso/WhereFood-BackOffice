@@ -30,6 +30,9 @@
             <div class="row h-100">
                 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark navbar-dark sidebar collapse">
                     <div class="position-sticky pt-3">
+                        <div class="wherefood_logo">
+                            <img src={{asset("storage/img/WHEREFOOD.png")}} alt="wherefood_logo">
+                        </div>
                         @if (Auth::check())
                             <div class="text-center mb-4">
                                     <div class="text-white mt-2">Benvenuto/a, {{ Auth::user()->name }}</div>                                 
@@ -95,3 +98,9 @@
 </body>
 
 </html>
+
+<style>
+    .wherefood_logo img{
+        width: 100%;
+    }
+</style>
