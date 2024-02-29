@@ -46,7 +46,7 @@
                                 <h5 class="modal-title" id="confirmDeleteModalLabel{{$product->id}}">Conferma eliminazione</h5>
                             </div>
                             <div class="modal-body">
-                                Sei sicuro di voler eliminare questo prodotto?
+                                Vuoi eliminare questo prodotto?
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary cancelDeleteButton">Annulla</button>
