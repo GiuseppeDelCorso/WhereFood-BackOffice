@@ -9,6 +9,7 @@ use App\Http\Requests\UpdateRestaurantRequest;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class RestaurantController extends Controller
 {
@@ -61,6 +62,10 @@ class RestaurantController extends Controller
     public function update(UpdateRestaurantRequest $request, Restaurant $restaurant)
     {
         $dati_validati = $request->validated();
+
+        $percorso = Storage::disk("public")->put('/img/restaurants', $request['image']);
+        $dati_validati["image"] = $percorso;
+
         $restaurant->update($dati_validati);    //update con idati validati dalla request
         if ($request->categories) {                        //per l'update delle categories sincronizzo la tabella pivot con le categories provenienti dalla request
             $restaurant->categories()->sync($request->categories);
