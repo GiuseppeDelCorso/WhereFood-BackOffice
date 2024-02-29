@@ -9,6 +9,8 @@ use App\Http\Requests\UpdateProductRequest;
 use App\Models\Category;
 use App\Models\Restaurant;
 use App\Models\Type;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
@@ -18,10 +20,11 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $restaurants = Restaurant::all();
-        $products = Product::all();
+        $loggeduser = Auth::user()->id;
+        $restaurant_id = DB::table('restaurants')->where('user_id', $loggeduser)->value('id');
+        $products = Product::where('restaurant_id', $restaurant_id)->get();
         $categories = Category::all();
-        return view("admin.products.index", compact("restaurants", "categories", "products"));
+        return view("admin.products.index", compact("categories", "products"));
     }
 
     /**
@@ -40,8 +43,12 @@ class ProductController extends Controller
     {
         $validated = $request->validated();
         $percorso = Storage::disk("public")->put('/img/products', $request['image']);
-        $validati["image"] = $percorso;
+        $validated["image"] = $percorso;
+
+        $loggeduser = Auth::user()->id;
         $newproduct = new Product();
+        $newproduct->restaurant_id = DB::table('restaurants')->where('user_id', $loggeduser)->value('id');
+        $newproduct->visibility = $request->has('visibility');
         $newproduct->fill($validated);
         $newproduct->save();
 
@@ -75,7 +82,8 @@ class ProductController extends Controller
     public function update(UpdateProductRequest $request, Product $product)
     {
 
-        $data =  $request->validated();
+        $dati_validati = $request->validated();
+
 
         if ($request->hasFile("image")) {
 
@@ -90,7 +98,10 @@ class ProductController extends Controller
         if ($request->type) {
             $product->type()->sync($request->type);
         }
-        $product->update($data);
+
+        $product->visibility = $request->has('visibility');
+
+        $product->update($dati_validati);
 
 
         // if ($request->tags) {

@@ -9,23 +9,14 @@ use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
-    public function run()
+    public function run(): void
     {
-        $users = [
-            [
-                'name' => 'Admin',
-                'email' => 'admin@gmail.it',
-                'password' => 'prova123prova',
-            ],
-        ];
-
+        $users = config('users');
 
         foreach ($users as $user) {
             $newUser = new User();
-            $newUser->name = $user["name"];
-            $newUser->email = $user["email"];
             $newUser->password = Hash::make('prova123prova');
-            $newUser->save();
-        }
+            $newUser->fill($user)->save();
+        };
     }
 }

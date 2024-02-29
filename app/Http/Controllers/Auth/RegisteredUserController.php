@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Restaurant;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
@@ -10,6 +11,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
 
@@ -32,7 +34,7 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
@@ -45,6 +47,17 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         Auth::login($user);
+
+
+        //crea ristorante collegato all'utente appena creato e loggato
+       $loggeduser = Auth::user()->id;
+        $newRestaurant = new Restaurant();
+        $newRestaurant->user_id = $loggeduser;
+        $newRestaurant->name = '';
+        $newRestaurant->image = '';
+        $newRestaurant->address = '';
+        $newRestaurant->PIVA = ''; 
+        $newRestaurant->save();
 
         return redirect(RouteServiceProvider::HOME);
     }
