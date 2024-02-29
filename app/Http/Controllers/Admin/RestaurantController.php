@@ -59,7 +59,12 @@ class RestaurantController extends Controller
      */
     public function update(UpdateRestaurantRequest $request, Restaurant $restaurant)
     {
-        //
+        $dati_validati = $request->validated();
+        $restaurant->update($dati_validati);    //update con idati validati dalla request
+        if ($request->categories) {                        //per l'update delle categories sincronizzo la tabella pivot con le categories provenienti dalla request
+            $restaurant->categories()->sync($request->categories);
+        }
+        return redirect()->route('admin.restaurants.index', $restaurant->id);
     }
 
     /**
