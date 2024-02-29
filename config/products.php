@@ -2,208 +2,304 @@
 
 $products = [
   [
-    'name' => 'Spaghetti alla Carbonara',
-    'image' => 'img/products/spaghetti_carbonara.jpg',
-    'ingredients' => 'Spaghetti, pancetta, uova, pecorino romano, pepe nero',
-    'description' => 'Una pietanza romana a base di spaghetti, uova, pancetta e formaggio.',
-    'type_id' => 1,
-    'price' => '12.99',
+    'name' => 'Hamburger',
+    'image' => 'img/products/hamburger.jpg',
+    'ingredients' => 'Pane, carne, lattuga, pomodoro, formaggio',
+    'description' => 'Delizioso hamburger con ingredienti freschi.',
+    'type_id' => 5,
+    'price' => 5.99,
     'visibility' => true,
-    'restaurant_id' => 9
+    'restaurant_id' => 1
+  ],
+  [
+    'name' => 'Cheeseburger',
+    'image' => 'img/products/cheeseburger.jpg',
+    'ingredients' => 'Pane, carne, formaggio, lattuga, pomodoro',
+    'description' => 'Hamburger con formaggio aggiunto.',
+    'type_id' => 5,
+    'price' => 6.49,
+    'visibility' => true,
+    'restaurant_id' => 1
+  ],
+  [
+    'name' => 'Big Mac',
+    'image' => 'img/products/big_mac.jpg',
+    'ingredients' => 'Pane, carne, formaggio, insalata, cipolla, salsa speciale',
+    'description' => 'Il famoso hamburger di McDonalds.',
+    'type_id' => 5,
+    'price' => 7.99,
+    'visibility' => true,
+    'restaurant_id' => 1
+  ],
+  [
+    'name' => 'Fries',
+    'image' => 'img/products/fries.jpg',
+    'ingredients' => 'Patate fritte',
+    'description' => 'Patatine fritte croccanti e saporite.',
+    'type_id' => 2,
+    'price' => 2.99,
+    'visibility' => true,
+    'restaurant_id' => 1
+  ],
+  [
+    'name' => 'Chicken Royale',
+    'image' => 'img/products/chicken_royale.jpg',
+    'ingredients' => 'Pane, pollo impanato, lattuga, maionese',
+    'description' => 'Panino con pollo croccante.',
+    'type_id' => 5,
+    'price' => 6.99,
+    'visibility' => true,
+    'restaurant_id' => 2
+  ],
+  [
+    'name' => 'Whopper',
+    'image' => 'img/products/whopper.jpg',
+    'ingredients' => 'Pane, carne, pomodoro, lattuga, cetriolini, maionese',
+    'description' => 'Iconico hamburger di Burger King.',
+    'type_id' => 5,
+    'price' => 8.49,
+    'visibility' => true,
+    'restaurant_id' => 2
+  ],
+  [
+    'name' => 'Fries',
+    'image' => 'img/products/fries.jpg',
+    'ingredients' => 'Patate fritte',
+    'description' => 'Patatine fritte croccanti e saporite.',
+    'type_id' => 2,
+    'price' => 2.99,
+    'visibility' => true,
+    'restaurant_id' => 2
+  ],
+  [
+    'name' => 'Bacon Cheeseburger',
+    'image' => 'img/products/bacon_cheeseburger.jpg',
+    'ingredients' => 'Pane, carne, formaggio, bacon, lattuga, pomodoro',
+    'description' => 'Hamburger con formaggio e bacon.',
+    'type_id' => 5,
+    'price' => 7.99,
+    'visibility' => true,
+    'restaurant_id' => 3
+  ],
+  [
+    'name' => 'Fries',
+    'image' => 'img/products/fries.jpg',
+    'ingredients' => 'Patate fritte',
+    'description' => 'Patatine fritte croccanti e saporite.',
+    'type_id' => 2,
+    'price' => 3.49,
+    'visibility' => true,
+    'restaurant_id' => 3
+  ],
+  [
+    'name' => 'Hot Dog',
+    'image' => 'img/products/hot_dog.jpg',
+    'ingredients' => 'Pane per hot dog, salsiccia, cipolla, ketchup, senape',
+    'description' => 'Hot dog classico.',
+    'type_id' => 5,
+    'price' => 4.99,
+    'visibility' => true,
+    'restaurant_id' => 3
   ],
   [
     'name' => 'Pizza Margherita',
     'image' => 'img/products/pizza_margherita.jpg',
-    'ingredients' => 'Farina, lievito, pomodoro, mozzarella, basilico',
-    'description' => 'Una classica pizza italiana con pomodoro, mozzarella e basilico.',
+    'ingredients' => 'Impasto per pizza, salsa di pomodoro, mozzarella, basilico',
+    'description' => 'Pizza classica con mozzarella e pomodoro.',
     'type_id' => 4,
-    'price' => '10.99',
+    'price' => 9.99,
     'visibility' => true,
-    'restaurant_id' => 3
+    'restaurant_id' => 4
+  ],
+  [
+    'name' => 'Pizza Pepperoni',
+    'image' => 'img/products/pizza_pepperoni.jpg',
+    'ingredients' => 'Impasto per pizza, salsa di pomodoro, mozzarella, pepperoni',
+    'description' => 'Pizza con pepperoni piccanti.',
+    'type_id' => 4,
+    'price' => 10.99,
+    'visibility' => true,
+    'restaurant_id' => 4
+  ],
+  [
+    'name' => 'Pizza Vegetariana',
+    'image' => 'img/products/pizza_vegetariana.jpg',
+    'ingredients' => 'Impasto per pizza, salsa di pomodoro, mozzarella, verdure miste',
+    'description' => 'Pizza con una selezione di verdure fresche.',
+    'type_id' => 4,
+    'price' => 11.99,
+    'visibility' => true,
+    'restaurant_id' => 4
   ],
   [
     'name' => 'Sushi Misto',
     'image' => 'img/products/sushi_misto.jpg',
-    'ingredients' => 'Riso, pesce crudo assortito, alga nori, cetriolo, avocado',
-    'description' => 'Una selezione di sushi con pesce crudo assortito e riso.',
-    'type_id' => 1,
-    'price' => '15.99',
+    'ingredients' => 'Riso, pesce crudo assortito, alga nori',
+    'description' => 'Assortimento di sushi fresco.',
+    'type_id' => 2,
+    'price' => 15.99,
     'visibility' => true,
     'restaurant_id' => 7
   ],
   [
-    'name' => 'Curry di Pollo',
-    'image' => 'img/products/curry_pollo.jpg',
-    'ingredients' => 'Pollo, curry in polvere, pomodoro, cipolla, aglio, zenzero',
-    'description' => 'Un piatto indiano speziato a base di pollo e curry.',
+    'name' => 'Tempura',
+    'image' => 'img/products/tempura.jpg',
+    'ingredients' => 'Verdure, gamberi, pastella',
+    'description' => 'Frittura giapponese croccante.',
     'type_id' => 2,
-    'price' => '11.99',
-    'visibility' => true,
-    'restaurant_id' => 6
-  ],
-  [
-    'name' => 'Hamburger con Patatine',
-    'image' => 'img/products/hamburger_patatine.jpg',
-    'ingredients' => 'Pane, carne di manzo, formaggio, lattuga, pomodoro, patate',
-    'description' => 'Un classico hamburger con formaggio e patatine fritte.',
-    'type_id' => 5,
-    'price' => '9.99',
-    'visibility' => true,
-    'restaurant_id' => 3
-  ],
-  [
-    'name' => 'Pollo alla Kung Pao',
-    'image' => 'img/products/pollo_kung_pao.jpg',
-    'ingredients' => 'Pollo, peperoncino, arachidi, salsa di soia, cipolla, aglio',
-    'description' => 'Un piatto cinese piccante con pollo, peperoncino e arachidi.',
-    'type_id' => 2,
-    'price' => '13.99',
-    'visibility' => true,
-    'restaurant_id' => 4
-  ],
-  [
-    'name' => 'Insalata Greca',
-    'image' => 'img/products/insalata_greca.jpg',
-    'ingredients' => 'Lattuga, pomodoro, cetrioli, olive, feta, condimento greco',
-    'description' => 'Un\'insalata fresca con ingredienti tipici della cucina greca.',
-    'type_id' => 2,
-    'price' => '8.99',
-    'visibility' => true,
-    'restaurant_id' => 5
-  ],
-  [
-    'name' => 'Taco Messicano',
-    'image' => 'img/products/taco_messicano.jpg',
-    'ingredients' => 'Tortilla di mais, carne macinata, pomodoro, lattuga, formaggio, salsa',
-    'description' => 'Un taco tradizionale con carne macinata, verdure e salsa.',
-    'type_id' => 2,
-    'price' => '7.99',
-    'visibility' => true,
-    'restaurant_id' => 7
-  ],
-  [
-    'name' => 'Salmone alla Griglia',
-    'image' => 'img/products/salmone_griglia.jpg',
-    'ingredients' => 'Salmone fresco, limone, olio d\'oliva, sale, pepe',
-    'description' => 'Salmone fresco grigliato con una spruzzata di limone.',
-    'type_id' => 2,
-    'price' => '16.99',
-    'visibility' => true,
-    'restaurant_id' => 13
-  ],
-  [
-    'name' => 'Calzone Ripieno',
-    'image' => 'img/products/calzone_ripieno.jpg',
-    'ingredients' => 'Impasto per pizza, prosciutto cotto, funghi, mozzarella, pomodoro',
-    'description' => 'Un calzone ripieno con prosciutto cotto, funghi e mozzarella.',
-    'type_id' => 4,
-    'price' => '14.99',
+    'price' => 12.99,
     'visibility' => true,
     'restaurant_id' => 12
-
   ],
   [
-    'name' => 'Risotto ai Funghi',
-    'image' => 'img/products/risotto_funghi.jpg',
-    'ingredients' => 'Riso Arborio, funghi porcini, brodo vegetale, cipolla, vino bianco',
-    'description' => 'Un risotto cremoso con funghi porcini e un tocco di vino bianco.',
-    'type_id' => 2,
-    'price' => '13.99',
-    'visibility' => true,
-    'restaurant_id' => 1
-
-  ],
-  [
-    'name' => 'Burrito Messicano',
-    'image' => 'img/products/burrito_messicano.jpg',
-    'ingredients' => 'Tortilla di grano, carne di manzo, riso, fagioli, formaggio, salsa',
-    'description' => 'Un burrito farcito con carne di manzo, riso, fagioli e formaggio.',
-    'type_id' => 5,
-    'price' => '10.49',
+    'name' => 'Taco di pollo',
+    'image' => 'img/products/taco_pollo.jpg',
+    'ingredients' => 'Pollo, Lattuga, pomodori, Jalapegno',
+    'description' => 'Taco con pollo e salse messicane.',
+    'type_id' => 1,
+    'price' => 6.99,
     'visibility' => true,
     'restaurant_id' => 7
-
   ],
   [
-    'name' => 'Tagliatelle al Tartufo',
-    'image' => 'img/products/tagliatelle_tartufo.jpg',
-    'ingredients' => 'Tagliatelle fresche, tartufo nero, panna, parmigiano',
-    'description' => 'Tagliatelle fresche condite con tartufo nero e panna.',
+    'name' => 'Insalata di Stagione',
+    'image' => 'img/products/insalata.jpg',
+    'ingredients' => 'Lattuga, pomodori, cetrioli, carote, condimento',
+    'description' => 'Insalata fresca con verdure di stagione.',
     'type_id' => 2,
-    'price' => '18.99',
+    'price' => 6.99,
     'visibility' => true,
-    'restaurant_id' => 1
+    'restaurant_id' => 7
   ],
   [
-    'name' => 'Pad Thai',
-    'image' => 'img/products/pad_thai.jpg',
-    'ingredients' => 'Tagliatelle di riso, gamberetti, tofu, uova, arachidi, germogli di soia',
-    'description' => 'Una famosa pietanza thailandese con tagliatelle di riso e ingredienti vari.',
-    'type_id' => 1,
-    'price' => '11.99',
+    'name' => 'Gelato alla Vaniglia',
+    'image' => 'img/products/gelato_vaniglia.jpg',
+    'ingredients' => 'Latte, zucchero, vaniglia',
+    'description' => 'Gelato cremoso alla vaniglia.',
+    'type_id' => 3,
+    'price' => 4.99,
+    'visibility' => true,
+    'restaurant_id' => 8
+  ],
+  [
+    'name' => 'Tiramisù',
+    'image' => 'img/products/tiramisu.jpg',
+    'ingredients' => 'Savoiardi, caffè, mascarpone, cacao',
+    'description' => 'Dolce italiano tradizionale.',
+    'type_id' => 3,
+    'price' => 5.99,
+    'visibility' => true,
+    'restaurant_id' => 8
+  ],
+  [
+    'name' => 'Birra Artigianale',
+    'image' => 'img/products/birra_artigianale.jpg',
+    'ingredients' => 'Acqua, malto, luppolo, lievito',
+    'description' => 'Birra artigianale di produzione locale.',
+    'type_id' => 7,
+    'price' => 4.99,
     'visibility' => true,
     'restaurant_id' => 9
   ],
   [
-    'name' => 'Caesar Salad',
-    'image' => 'img/products/caesar_salad.jpg',
-    'ingredients' => 'Lattuga romana, crostini, parmigiano, salsa Caesar',
-    'description' => 'Un\'insalata classica con dressing Caesar, crostini e parmigiano.',
-    'type_id' => 2,
-    'price' => '8.99',
-    'visibility' => true,
-    'restaurant_id' => 2
-
-  ],
-  [
-    'name' => 'Cheesesteak Sandwich',
-    'image' => 'img/products/cheesesteak_sandwich.jpg',
-    'ingredients' => 'Bistecca tritata, formaggio Cheddar, cipolle, peperoni, panino',
-    'description' => 'Un sandwich americano con bistecca tritata e formaggio fuso.',
-    'type_id' => 5,
-    'price' => '9.99',
-    'visibility' => true,
-    'restaurant_id' => 2
-  ],
-  [
-    'name' => 'Pasta Primavera',
-    'image' => 'img/products/pasta_primavera.jpg',
-    'ingredients' => 'Pasta, zucchine, pomodorini, piselli, carote, prezzemolo',
-    'description' => 'Una pasta primaverile con verdure fresche e un tocco di prezzemolo.',
-    'type_id' => 1,
-    'price' => '10.99',
-    'visibility' => true,
-    'restaurant_id' => 1
-  ],
-  [
-    'name' => 'Gelato alla Fragola',
-    'image' => 'img/products/gelato_fragola.jpg',
-    'ingredients' => 'Latte, zucchero, fragole fresche, panna',
-    'description' => 'Un delizioso gelato alla fragola fatto in casa con fragole fresche.',
+    'name' => 'Vino Rosso',
+    'image' => 'img/products/vino_rosso.jpg',
+    'ingredients' => 'Uva, lievito',
+    'description' => 'Vino rosso di qualità.',
     'type_id' => 6,
-    'price' => '5.99',
+    'price' => 12.99,
     'visibility' => true,
-    'restaurant_id' => 14
+    'restaurant_id' => 10
   ],
   [
-    'name' => 'Fettuccine Alfredo',
-    'image' => 'img/products/fettuccine_alfredo.jpg',
-    'ingredients' => 'Fettuccine, panna, burro, parmigiano',
-    'description' => 'Una pasta cremosa con salsa Alfredo a base di panna e formaggio.',
-    'type_id' => 1,
-    'price' => '12.49',
+    'name' => 'Bibita Gassata',
+    'image' => 'img/products/bibita_gassata.jpg',
+    'ingredients' => 'Acqua, zucchero, anidride carbonica, aromi',
+    'description' => 'Bibita gassata classica.',
+    'type_id' => 8,
+    'price' => 1.99,
     'visibility' => true,
-    'restaurant_id' => 1
+    'restaurant_id' => 11
   ],
   [
-    'name' => 'Maki Sushi',
-    'image' => 'img/products/maki_sushi.jpg',
-    'ingredients' => 'Riso, alga nori, tonno, avocado, cetriolo, salsa teriyaki',
-    'description' => 'Rotolini di sushi con tonno, avocado e cetriolo, serviti con salsa teriyaki.',
-    'type_id' => 1,
-    'price' => '14.99',
+    'name' => 'Bibita Analcolica',
+    'image' => 'img/products/bibita_analcolica.jpg',
+    'ingredients' => 'Acqua, zucchero, aromi',
+    'description' => 'Bibita analcolica rinfrescante.',
+    'type_id' => 8,
+    'price' => 2.49,
     'visibility' => true,
-    'restaurant_id' => 4
+    'restaurant_id' => 12
+  ],
+  [
+    'name' => 'Kebab Misto',
+    'image' => 'img/products/kebab_misto.jpg',
+    'ingredients' => 'Carne di pollo e manzo, pane pita, insalata, salsa',
+    'description' => 'Kebab misto con carne di pollo e manzo.',
+    'type_id' => 5,
+    'price' => 7.99,
+    'visibility' => true,
+    'restaurant_id' => 9
+  ],
+  [
+    'name' => 'Kebab Manzo',
+    'image' => 'img/products/kebab_manzo.jpg',
+    'ingredients' => 'Carne di pollo e manzo, pane pita, insalata, salsa',
+    'description' => 'Kebab misto con carne di pollo e manzo.',
+    'type_id' => 5,
+    'price' => 5.99,
+    'visibility' => true,
+    'restaurant_id' => 9
+  ],
+  [
+    'name' => 'Kebab Misto',
+    'image' => 'img/products/kebab_misto.jpg',
+    'ingredients' => 'Carne di pollo e manzo, pane pita, insalata, salsa',
+    'description' => 'Kebab misto con carne di pollo e manzo.',
+    'type_id' => 5,
+    'price' => 7.99,
+    'visibility' => true,
+    'restaurant_id' => 11
+  ],
+  [
+    'name' => 'Kebab Manzo',
+    'image' => 'img/products/kebab_manzo.jpg',
+    'ingredients' => 'Carne di pollo e manzo, pane pita, insalata, salsa',
+    'description' => 'Kebab misto con carne di pollo e manzo.',
+    'type_id' => 5,
+    'price' => 5.99,
+    'visibility' => true,
+    'restaurant_id' => 11
+  ],
+  [
+    'name' => 'Pad Thai',
+    'image' => 'img/products/pad_thai.jpg',
+    'ingredients' => 'Spaghetti di riso, gamberi, tofu, uova, arachidi, salsa di tamarindo',
+    'description' => 'Piatto tradizionale thailandese.',
+    'type_id' => 1,
+    'price' => 10.99,
+    'visibility' => true,
+    'restaurant_id' => 10
+  ],
+  [
+    'name' => 'Bistecca di Manzo',
+    'image' => 'img/products/bistecca.jpg',
+    'ingredients' => 'Bistecca di manzo, contorno misto',
+    'description' => 'Bistecca di manzo alla griglia.',
+    'type_id' => 2,
+    'price' => 19.99,
+    'visibility' => true,
+    'restaurant_id' => 5
+  ],
+  [
+    'name' => 'Insalata di Mare',
+    'image' => 'img/products/insalata_di_mare.jpg',
+    'ingredients' => 'Frutti di mare misti, lattuga, pomodorini',
+    'description' => 'Insalata fresca con frutti di mare.',
+    'type_id' => 2,
+    'price' => 12.99,
+    'visibility' => true,
+    'restaurant_id' => 6
   ]
 ];
 return ($products);
