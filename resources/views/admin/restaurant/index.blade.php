@@ -38,7 +38,7 @@
                 <div class="mb-3">
                     <label for="address" class="form-label">Indirizzo</label>
                     <input type="text" class="form-control @error('address') is-invalid @enderror" id="address"
-                        name="address" value="{{ old('address') ?? $restaurant->address }}">
+                        name="address" value="{{ old('address') ?? $restaurant->address }}" required>
                     @error('address')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -46,7 +46,7 @@
                 <div class="mb-3">
                     <label for="PIVA" class="form-label">P.IVA</label>
                     <input type="text" maxlength="11" class="form-control @error('PIVA') is-invalid @enderror" id="PIVA"
-                        name="PIVA" value="{{ old('PIVA') ?? $restaurant->PIVA }}">
+                        name="PIVA" value="{{ old('PIVA') ?? $restaurant->PIVA }}" required>
                     @error('PIVA')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
