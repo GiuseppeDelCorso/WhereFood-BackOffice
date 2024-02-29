@@ -23,7 +23,6 @@ class OrderProductSeeder extends Seeder
                 ['order_id' => 3, 'product_id' => 6, 'quantity' => 2],
                 ['order_id' => 3, 'product_id' => 4, 'quantity' => 2],
                 ['order_id' => 4, 'product_id' => 5, 'quantity' => 2],
-
             ];
 
             DB::table('order_product')->insert($data);

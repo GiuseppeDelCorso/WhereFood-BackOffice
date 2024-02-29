@@ -6,7 +6,7 @@
             {{-- Crea card per prodotti --}}
             @foreach ($products as $product)
                 <div class="col-md-4">
-                    <div class="card hc">
+                    <div class="card bgCard">
                         <div class="card-header d-flex justify-content-between">
                             <h4>{{ $product->name }}</h4>
                             <a type="button" class="btn btn-primary" href="{{ route('admin.products.show', $product->id) }}">Dettagli</a>
@@ -14,7 +14,7 @@
                         <div class="card-img">
                             <img src="{{asset("storage/".$product->image)}}" alt="{{ $product->name }}">
                         </div>
-                        <div class="card-body text-muted">{{$product->type ? $product->type->name : "Nessun tipo di prodotto";}}</div>
+                        <div class="card-body FontStyleName">{{$product->type ? $product->type->name : "Nessun tipo di prodotto";}}</div>
                         <div class="card-body">Ingredienti: {{ $product->ingredients }}</div>
                         <div class="card-body">Descrizione: {{ $product->description }}</div>
                         <div class="card-body">Prezzo: {{ $product->price }} €</div>
@@ -49,7 +49,7 @@
                                 Vuoi eliminare questo prodotto?
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary cancelDeleteButton">Annulla</button>
+                                <button type="button" class="btn btn-primary cancelDeleteButton">Annulla</button>
 
                                 <button type="button" class="btn btn-danger confirmDeleteButton" data-product-id="{{$product->id}}">Elimina</button>
                             </div>
@@ -106,5 +106,11 @@
     }
     .hc{
         height: 700px !important;
+    }
+    .bgCard{
+        background-color: rgb(188, 226, 228) !important;
+    }
+    .FontStyleName{
+        font-weight: bold;
     }
 </style>

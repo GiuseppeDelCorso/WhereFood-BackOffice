@@ -6,8 +6,8 @@
             {{-- Crea card per prodotti --}}
             @foreach ($orders as $order)
                 <div class="col-md-4 my-3">
-                    <div class="card hc">
-                        <div class="card-header d-flex justify-content-between">
+                    <div class="card bgCard">
+                        <div class="bgCard card-header d-flex justify-content-between FontStyleName">
                             Ordine di {{ $order->customer_name }}
                         </div>
                         <div class="card-body">Nome: {{ $order->customer_name }}</div>
@@ -24,4 +24,10 @@
 @endsection
 
 <style>
+    .bgCard{
+        background-color: rgb(188, 226, 228) !important;
+    }
+    .FontStyleName{
+        font-weight: bold;
+    }
 </style>
