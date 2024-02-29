@@ -9,7 +9,7 @@
                     <p>L'applicazione che ti permette di ordinare il tuo piatto preferito quando vuoi. </p>
                     <p>Tu ordina e ci pensiamo noi!!</p>
                     <p>Scegli la cucina che preferisci di più, dall'America fino al Giappone.</p>
-                  
+                     <p>Registrati per una miglire esperienza ;)</p>
             </div>
         </div>
         
