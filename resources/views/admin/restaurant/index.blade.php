@@ -44,15 +44,13 @@
                     @enderror
                 </div>
                 <div class="mb-3">
-                    <label for="PIVA" class="form-label">Piva</label>
-                    <input type="text" class="form-control @error('PIVA') is-invalid @enderror" id="PIVA"
+                    <label for="PIVA" class="form-label">P.IVA</label>
+                    <input type="text" maxlength="11" class="form-control @error('PIVA') is-invalid @enderror" id="PIVA"
                         name="PIVA" value="{{ old('PIVA') ?? $restaurant->PIVA }}">
                     @error('PIVA')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-
-
                 <div class="mb-3">
                     <label for="tag" class="form-label">Categorie</label>
                     <select class="form-select" name="categories[]" id="tags" multiple>
@@ -64,12 +62,6 @@
                         @endforeach
                     </select>
                 </div>
-
-
-
-
-
-
 
                 <button type="submit" class="btn btn-primary">Aggiungi / Modifica</button>
             </form>
