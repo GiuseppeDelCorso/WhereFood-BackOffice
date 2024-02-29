@@ -17,9 +17,10 @@ class RestaurantController extends Controller
      */
     public function index()
     {
+        $categories = Category::all();
         $loggeduser = Auth::user()->id;
         $restaurant = Restaurant::where('user_id', $loggeduser)->first(); //con "first" evitiamo di passare alla vista una collection
-        return view('admin.restaurant.index', compact('restaurant'));
+        return view('admin.restaurant.index', compact('restaurant', 'categories'));
     }
 
     /**

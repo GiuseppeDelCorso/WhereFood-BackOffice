@@ -51,11 +51,26 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" name="visibility" id="visibility" value="1"
-                        @if ($restaurant->visibility) checked @endif>
-                    <label for="visibility">Visibile</label>
+
+
+                <div class="mb-3">
+                    <label for="tag" class="form-label">Categorie</label>
+                    <select class="form-select" name="categories[]" id="tags" multiple>
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}"
+                                {{ $restaurant->categories->contains($category->id) ? 'selected' : '' }}>
+                                {{ $category->name }}
+                            </option>
+                        @endforeach
+                    </select>
                 </div>
+
+
+
+
+
+
+
                 <button type="submit" class="btn btn-primary">Aggiungi / Modifica</button>
             </form>
         </div>
