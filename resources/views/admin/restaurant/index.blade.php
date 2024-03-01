@@ -45,8 +45,8 @@
                 </div>
                 <div class="mb-3">
                     <label for="PIVA" class="form-label">P.IVA</label>
-                    <input type="text" maxlength="11" class="form-control @error('PIVA') is-invalid @enderror" id="PIVA"
-                        name="PIVA" value="{{ old('PIVA') ?? $restaurant->PIVA }}" required>
+                    <input type="text" maxlength="11" class="form-control @error('PIVA') is-invalid @enderror"
+                        id="PIVA" name="PIVA" value="{{ old('PIVA') ?? $restaurant->PIVA }}" required>
                     @error('PIVA')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
@@ -62,8 +62,9 @@
                         @endforeach
                     </select>
                 </div>
-
-                <button type="submit" class="btn btn-primary">Aggiungi / Modifica</button>
+                <button type="submit" class="btn btn-primary">
+                    {{ $restaurant->name ? 'Modifica Ristorante' : 'Aggiungi Ristorante' }}
+                </button>
             </form>
         </div>
     </div>
