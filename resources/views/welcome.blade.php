@@ -55,7 +55,7 @@
             </div>
 
             <div class="firma">
-                Progettato da Andrea Francioni, Giuseppe Del Corso, Michele Piccillo, Emanuele Guerra, Emanuele Khushi
+                Progettato da Andrea Francioni, Giuseppe Del Corso, Michele Piccinno, Emanuele Guerra, Emanuele Khushi
             </div>
     </footer>
     
