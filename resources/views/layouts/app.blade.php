@@ -30,7 +30,7 @@
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <div class="logo">
-                        <img src="Logo" alt="Logo">
+                        <img src="/storage/welcome-img/WHEREFOOD.png" alt="Logo">
                     </div>
                     {{-- config('app.name', 'Laravel') --}}
                 </a>
