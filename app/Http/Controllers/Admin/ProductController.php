@@ -77,7 +77,7 @@ class ProductController extends Controller
         $user_products = Product::where("restaurant_id", $restaurant)->get();
         $products = Product::select("id")->where("restaurant_id", $restaurant)->first();
         if (!$user_products->contains($product)) {
-            return view("errors.product_error");
+            abort(404);
         }
         $types = Type::all();
         return view("admin.products.edit", compact("types", "product"));
