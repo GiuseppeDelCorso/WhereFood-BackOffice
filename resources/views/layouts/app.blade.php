@@ -29,8 +29,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-                    <div class="wherefood_logo">
-                        <img src={{asset("storage/img/WHEREFOOD.png")}} alt="wherefood_logo">
+                    <div class="logo">
+                        <img src="/storage/welcome-img/WHEREFOOD.png" alt="Logo">
                     </div>
                     {{-- config('app.name', 'Laravel') --}}
                 </a>
@@ -88,6 +88,12 @@
         </main>
     </div>
 </body>
+
+<style>
+    nav {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
 
 </html>
 

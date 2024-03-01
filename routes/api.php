@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Api\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\RestaurantController;
+use App\Http\Controllers\Api\ProductControllerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,18 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+// Rotte per visualizzare l'elenco dei ristoranti
+Route::get('restaurants', [RestaurantController::class, "index"]);
+
+// Rotte per visualizzare i dettagli di un ristorante specifico
+Route::get('restaurants/{id}', [RestaurantController::class, "show"]);
+
+// Rotte per visualizzare i prodotti di un ristorante specifico
+Route::get('restaurants/{restaurant_id}/products', [ProductController::class, "index"]);
+
+// Rotte per filtrare i ristoranti in base alle categorie
+Route::get('restaurants/categories/{category_id}', [RestaurantController::class, "filterByCategory"]);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
