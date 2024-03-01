@@ -16,23 +16,44 @@ $restaurants = [
     'PIVA' => '90214930960'
   ],
   [
+    'user_id' => 14,
+    'name' => 'FiveGuys',
+    'image' => 'immagine_FiveGuys',
+    'address' => 'Via Alessandria 2',
+    'PIVA' => '90214930960'
+  ],
+  [
     'user_id' => 3,
     'name' => 'Pizzeria da Gigi',
-    'image' => 'immagine_pizzeriagigi',
-    'address' => 'Piazza Roma 45',
-    'PIVA' => '75214960961'
+    'image' => 'immagine_PizzeriaGigi',
+    'address' => 'Viale Quarta 98',
+    'PIVA' => '19814981944'
   ],
   [
-    'user_id' => 4,
-    'name' => 'Steak House',
-    'image' => 'immagine_steakhouse',
-    'address' => 'Via Lucca 45',
-    'PIVA' => '95214961967'
+    'user_id' => 10,
+    'name' => 'Il Taco da Tuco',
+    'image' => 'immagine_Il Taco_da_Tuco',
+    'address' => 'Viale Quarta 98',
+    'PIVA' => '19814981944'
   ],
   [
-    'user_id' => 5,
-    'name' => 'La Taverna Del Pescatore',
-    'image' => 'immagine_tavernapescatore',
+    'user_id' => 11,
+    'name' => 'la Gelateria',
+    'image' => 'immagine_la_gelateria',
+    'address' => 'Viale Quarta 98',
+    'PIVA' => '19814981944'
+  ],
+  [
+    'user_id' => 12,
+    'name' => 'Kebab Di Gaza',
+    'image' => 'immagine_Kebab_Di_Gaza',
+    'address' => 'Viale Quarta 98',
+    'PIVA' => '19814981944'
+  ],
+  [
+    'user_id' => 13,
+    'name' => ' Everyday Thai',
+    'image' => 'immagine_Evriday_thai',
     'address' => 'Viale Quarta 98',
     'PIVA' => '19814981944'
   ],
@@ -61,43 +82,8 @@ $restaurants = [
     'user_id' => 9,
     'name' => 'Ristorante Cor di zia',
     'image' => 'immagine_cor di zia',
-    'address' => 'Viale Abrosia',
+    'address' => 'Viale abrosia',
     'PIVA' => '56524982573'
-  ],
-  [
-    'user_id' => 10,
-    'name' => 'Il Taco da Tuco',
-    'image' => 'immagine_Il Taco_da_Tuco',
-    'address' => 'Via Troisi 98',
-    'PIVA' => '19814981944'
-  ],
-  [
-    'user_id' => 11,
-    'name' => 'la Gelateria',
-    'image' => 'immagine_la_gelateria',
-    'address' => 'Viale Mazzini 98',
-    'PIVA' => '19814981944'
-  ],
-  [
-    'user_id' => 12,
-    'name' => 'Kebab Di Gaza',
-    'image' => 'immagine_Kebab_Di_Gaza',
-    'address' => 'Via Olanda 98',
-    'PIVA' => '19814981944'
-  ],
-  [
-    'user_id' => 13,
-    'name' => ' Everyday Thai',
-    'image' => 'immagine_Evriday_thai',
-    'address' => 'Viale Margherita 98',
-    'PIVA' => '19814981944'
-  ],
-  [
-    'user_id' => 14,
-    'name' => 'FiveGuys',
-    'image' => 'immagine_FiveGuys',
-    'address' => 'Via Alessandria 2',
-    'PIVA' => '90214930960'
   ],
 ];
 return ($restaurants);

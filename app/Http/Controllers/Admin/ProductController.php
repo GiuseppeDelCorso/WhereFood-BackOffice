@@ -72,6 +72,13 @@ class ProductController extends Controller
      */
     public function edit(Product $product)
     {
+        $loggeduser = Auth::user()->id;
+        $restaurant = DB::table('restaurants')->where('user_id', $loggeduser)->value('id');
+        $user_products = Product::where("restaurant_id", $restaurant)->get();
+        $products = Product::select("id")->where("restaurant_id", $restaurant)->first();
+        if (!$user_products->contains($product)) {
+            return view("errors.product_error");
+        }
         $types = Type::all();
         return view("admin.products.edit", compact("types", "product"));
     }
