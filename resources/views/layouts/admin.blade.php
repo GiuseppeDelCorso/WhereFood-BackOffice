@@ -31,7 +31,7 @@
                 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark navbar-dark sidebar collapse">
                     <div class="position-sticky pt-3">
                         <div class="wherefood_logo">
-                            <img src={{asset("storage/img/WHEREFOOD.png")}} alt="wherefood_logo">
+                            <img src={{asset("storage/welcome-img/WHEREFOOD.png")}} alt="wherefood_logo">
                         </div>
                         @if (Auth::check())
                             <div class="text-center mb-4">
