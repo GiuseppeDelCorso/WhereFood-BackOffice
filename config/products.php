@@ -2,8 +2,8 @@
 
 $products = [
   [
-    'name' => 'Hamburger',
-    'image' => 'img/products/hamburger.jpg',
+    'name' => 'hamburger',
+    'image' => 'img/products/hamburger.png',
     'ingredients' => 'Pane, carne, lattuga, pomodoro, formaggio',
     'description' => 'Delizioso hamburger con ingredienti freschi.',
     'type_id' => 5,
@@ -13,7 +13,7 @@ $products = [
   ],
   [
     'name' => 'Cheeseburger',
-    'image' => 'img/products/cheeseburger.jpg',
+    'image' => 'img/products/cheeseburger.png',
     'ingredients' => 'Pane, carne, formaggio, lattuga, pomodoro',
     'description' => 'Hamburger con formaggio aggiunto.',
     'type_id' => 5,
@@ -23,7 +23,7 @@ $products = [
   ],
   [
     'name' => 'Big Mac',
-    'image' => 'img/products/big_mac.jpg',
+    'image' => 'img/products/big-mac.png',
     'ingredients' => 'Pane, carne, formaggio, insalata, cipolla, salsa speciale',
     'description' => 'Il famoso hamburger di McDonalds.',
     'type_id' => 5,
@@ -33,7 +33,7 @@ $products = [
   ],
   [
     'name' => 'Fries',
-    'image' => 'img/products/fries.jpg',
+    'image' => 'img/products/fries.png',
     'ingredients' => 'Patate fritte',
     'description' => 'Patatine fritte croccanti e saporite.',
     'type_id' => 2,
@@ -43,7 +43,7 @@ $products = [
   ],
   [
     'name' => 'Chicken Royale',
-    'image' => 'img/products/chicken_royale.jpg',
+    'image' => 'img/products/chicken-royale.png',
     'ingredients' => 'Pane, pollo impanato, lattuga, maionese',
     'description' => 'Panino con pollo croccante.',
     'type_id' => 5,
@@ -53,7 +53,7 @@ $products = [
   ],
   [
     'name' => 'Whopper',
-    'image' => 'img/products/whopper.jpg',
+    'image' => 'img/products/whopper.png',
     'ingredients' => 'Pane, carne, pomodoro, lattuga, cetriolini, maionese',
     'description' => 'Iconico hamburger di Burger King.',
     'type_id' => 5,
@@ -63,7 +63,7 @@ $products = [
   ],
   [
     'name' => 'Fries',
-    'image' => 'img/products/fries.jpg',
+    'image' => 'img/products/fries.png',
     'ingredients' => 'Patate fritte',
     'description' => 'Patatine fritte croccanti e saporite.',
     'type_id' => 2,
@@ -73,7 +73,7 @@ $products = [
   ],
   [
     'name' => 'Bacon Cheeseburger',
-    'image' => 'img/products/bacon_cheeseburger.jpg',
+    'image' => 'img/products/cheeseburger.png',
     'ingredients' => 'Pane, carne, formaggio, bacon, lattuga, pomodoro',
     'description' => 'Hamburger con formaggio e bacon.',
     'type_id' => 5,
@@ -83,7 +83,7 @@ $products = [
   ],
   [
     'name' => 'Fries',
-    'image' => 'img/products/fries.jpg',
+    'image' => 'img/products/fries.png',
     'ingredients' => 'Patate fritte',
     'description' => 'Patatine fritte croccanti e saporite.',
     'type_id' => 2,
@@ -93,7 +93,7 @@ $products = [
   ],
   [
     'name' => 'Hot Dog',
-    'image' => 'img/products/hot_dog.jpg',
+    'image' => 'img/products/hot-dog.png',
     'ingredients' => 'Pane per hot dog, salsiccia, cipolla, ketchup, senape',
     'description' => 'Hot dog classico.',
     'type_id' => 5,
@@ -103,7 +103,7 @@ $products = [
   ],
   [
     'name' => 'Pizza Margherita',
-    'image' => 'img/products/pizza_margherita.jpg',
+    'image' => 'img/products/pizza-margherita.png',
     'ingredients' => 'Impasto per pizza, salsa di pomodoro, mozzarella, basilico',
     'description' => 'Pizza classica con mozzarella e pomodoro.',
     'type_id' => 4,
@@ -113,7 +113,7 @@ $products = [
   ],
   [
     'name' => 'Pizza Pepperoni',
-    'image' => 'img/products/pizza_pepperoni.jpg',
+    'image' => 'img/products/pizza-pepperoni.png',
     'ingredients' => 'Impasto per pizza, salsa di pomodoro, mozzarella, pepperoni',
     'description' => 'Pizza con pepperoni piccanti.',
     'type_id' => 4,
@@ -123,7 +123,7 @@ $products = [
   ],
   [
     'name' => 'Pizza Vegetariana',
-    'image' => 'img/products/pizza_vegetariana.jpg',
+    'image' => 'img/products/pizza-vegetariana.png',
     'ingredients' => 'Impasto per pizza, salsa di pomodoro, mozzarella, verdure miste',
     'description' => 'Pizza con una selezione di verdure fresche.',
     'type_id' => 4,
@@ -133,7 +133,7 @@ $products = [
   ],
   [
     'name' => 'Sushi Misto',
-    'image' => 'img/products/sushi_misto.jpg',
+    'image' => 'img/products/sushi-misto.png',
     'ingredients' => 'Riso, pesce crudo assortito, alga nori',
     'description' => 'Assortimento di sushi fresco.',
     'type_id' => 2,
@@ -143,7 +143,7 @@ $products = [
   ],
   [
     'name' => 'Tempura',
-    'image' => 'img/products/tempura.jpg',
+    'image' => 'img/products/tempura.png',
     'ingredients' => 'Verdure, gamberi, pastella',
     'description' => 'Frittura giapponese croccante.',
     'type_id' => 2,
@@ -153,7 +153,7 @@ $products = [
   ],
   [
     'name' => 'Taco di pollo',
-    'image' => 'img/products/taco_pollo.jpg',
+    'image' => 'img/products/taco-pollo.png',
     'ingredients' => 'Pollo, Lattuga, pomodori, Jalapegno',
     'description' => 'Taco con pollo e salse messicane.',
     'type_id' => 1,
@@ -163,7 +163,7 @@ $products = [
   ],
   [
     'name' => 'Insalata di Stagione',
-    'image' => 'img/products/insalata.jpg',
+    'image' => 'img/products/insalata.png',
     'ingredients' => 'Lattuga, pomodori, cetrioli, carote, condimento',
     'description' => 'Insalata fresca con verdure di stagione.',
     'type_id' => 2,
@@ -173,7 +173,7 @@ $products = [
   ],
   [
     'name' => 'Gelato alla Vaniglia',
-    'image' => 'img/products/gelato_vaniglia.jpg',
+    'image' => 'img/products/gelato-vaniglia.png',
     'ingredients' => 'Latte, zucchero, vaniglia',
     'description' => 'Gelato cremoso alla vaniglia.',
     'type_id' => 3,
@@ -183,7 +183,7 @@ $products = [
   ],
   [
     'name' => 'Tiramisù',
-    'image' => 'img/products/tiramisu.jpg',
+    'image' => 'img/products/tiramisu.png',
     'ingredients' => 'Savoiardi, caffè, mascarpone, cacao',
     'description' => 'Dolce italiano tradizionale.',
     'type_id' => 3,
@@ -193,7 +193,7 @@ $products = [
   ],
   [
     'name' => 'Birra Artigianale',
-    'image' => 'img/products/birra_artigianale.jpg',
+    'image' => 'img/products/birra.png',
     'ingredients' => 'Acqua, malto, luppolo, lievito',
     'description' => 'Birra artigianale di produzione locale.',
     'type_id' => 7,
@@ -203,7 +203,7 @@ $products = [
   ],
   [
     'name' => 'Vino Rosso',
-    'image' => 'img/products/vino_rosso.jpg',
+    'image' => 'img/products/vino-rosso.png',
     'ingredients' => 'Uva, lievito',
     'description' => 'Vino rosso di qualità.',
     'type_id' => 6,
@@ -213,7 +213,7 @@ $products = [
   ],
   [
     'name' => 'Bibita Gassata',
-    'image' => 'img/products/bibita_gassata.jpg',
+    'image' => 'img/products/bibita-gasata.png',
     'ingredients' => 'Acqua, zucchero, anidride carbonica, aromi',
     'description' => 'Bibita gassata classica.',
     'type_id' => 8,
@@ -223,7 +223,7 @@ $products = [
   ],
   [
     'name' => 'Bibita Analcolica',
-    'image' => 'img/products/bibita_analcolica.jpg',
+    'image' => 'img/products/bibita-analcolica.png',
     'ingredients' => 'Acqua, zucchero, aromi',
     'description' => 'Bibita analcolica rinfrescante.',
     'type_id' => 8,
@@ -233,7 +233,7 @@ $products = [
   ],
   [
     'name' => 'Kebab Misto',
-    'image' => 'img/products/kebab_misto.jpg',
+    'image' => 'img/products/kebab-misto.png',
     'ingredients' => 'Carne di pollo e manzo, pane pita, insalata, salsa',
     'description' => 'Kebab misto con carne di pollo e manzo.',
     'type_id' => 5,
@@ -243,7 +243,7 @@ $products = [
   ],
   [
     'name' => 'Kebab Manzo',
-    'image' => 'img/products/kebab_manzo.jpg',
+    'image' => 'img/products/kebab-manzo.png',
     'ingredients' => 'Carne di pollo e manzo, pane pita, insalata, salsa',
     'description' => 'Kebab misto con carne di pollo e manzo.',
     'type_id' => 5,
@@ -253,7 +253,7 @@ $products = [
   ],
   [
     'name' => 'Kebab Misto',
-    'image' => 'img/products/kebab_misto.jpg',
+    'image' => 'img/products/kebab-misto.png',
     'ingredients' => 'Carne di pollo e manzo, pane pita, insalata, salsa',
     'description' => 'Kebab misto con carne di pollo e manzo.',
     'type_id' => 5,
@@ -263,7 +263,7 @@ $products = [
   ],
   [
     'name' => 'Kebab Manzo',
-    'image' => 'img/products/kebab_manzo.jpg',
+    'image' => 'img/products/kebab-manzo.png',
     'ingredients' => 'Carne di pollo e manzo, pane pita, insalata, salsa',
     'description' => 'Kebab misto con carne di pollo e manzo.',
     'type_id' => 5,
@@ -273,7 +273,7 @@ $products = [
   ],
   [
     'name' => 'Pad Thai',
-    'image' => 'img/products/pad_thai.jpg',
+    'image' => 'img/products/pad-thai.png',
     'ingredients' => 'Spaghetti di riso, gamberi, tofu, uova, arachidi, salsa di tamarindo',
     'description' => 'Piatto tradizionale thailandese.',
     'type_id' => 1,
@@ -283,7 +283,7 @@ $products = [
   ],
   [
     'name' => 'Bistecca di Manzo',
-    'image' => 'img/products/bistecca.jpg',
+    'image' => 'img/products/bistecca.png',
     'ingredients' => 'Bistecca di manzo, contorno misto',
     'description' => 'Bistecca di manzo alla griglia.',
     'type_id' => 2,
@@ -293,7 +293,7 @@ $products = [
   ],
   [
     'name' => 'Insalata di Mare',
-    'image' => 'img/products/insalata_di_mare.jpg',
+    'image' => 'img/products/insalata-di-mare.png',
     'ingredients' => 'Frutti di mare misti, lattuga, pomodorini',
     'description' => 'Insalata fresca con frutti di mare.',
     'type_id' => 2,

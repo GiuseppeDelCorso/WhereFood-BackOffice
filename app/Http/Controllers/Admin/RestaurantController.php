@@ -63,8 +63,15 @@ class RestaurantController extends Controller
     {
         $dati_validati = $request->validated();
 
-        $percorso = Storage::disk("public")->put('/img/restaurants', $request['image']);
-        $dati_validati["image"] = $percorso;
+        if ($request->hasFile("image")) {
+
+            if ($restaurant->image) {
+
+                Storage::disk("public")->delete($restaurant->image);
+            }
+            $percorso = Storage::disk("public")->put('/img/restaurants', $request['image']);
+            $dati_validati["image"] = $percorso;
+        }
 
         $restaurant->update($dati_validati);    //update con idati validati dalla request
         if ($request->categories) {                        //per l'update delle categories sincronizzo la tabella pivot con le categories provenienti dalla request
