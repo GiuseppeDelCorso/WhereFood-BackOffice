@@ -18,7 +18,7 @@ $orders = [
         'state_payment' => true
     ],
     [
-        'customer_name' => 'Bob',
+        'customer_name' => 'Francesco',
         'customer_surname' => 'Johnson',
         'customer_address' => '456 Elm Street',
         'customer_number' => '987654321',
@@ -34,7 +34,7 @@ $orders = [
         'state_payment' => true
     ],
     [
-        'customer_name' => 'David',
+        'customer_name' => 'Pino',
         'customer_surname' => 'Wilson',
         'customer_address' => '321 Pine Street',
         'customer_number' => '135792468',
@@ -66,7 +66,7 @@ $orders = [
         'state_payment' => true
     ],
     [
-        'customer_name' => 'Bob',
+        'customer_name' => 'Luca',
         'customer_surname' => 'Johnson',
         'customer_address' => '456 Elm Street',
         'customer_number' => '987654321',
@@ -74,7 +74,7 @@ $orders = [
         'state_payment' => true
     ],
     [
-        'customer_name' => 'Emma',
+        'customer_name' => 'Maria',
         'customer_surname' => 'Garcia',
         'customer_address' => '789 Oak Street',
         'customer_number' => '567890123',
@@ -82,7 +82,7 @@ $orders = [
         'state_payment' => true
     ],
     [
-        'customer_name' => 'David',
+        'customer_name' => 'Luigi',
         'customer_surname' => 'Brown',
         'customer_address' => '321 Pine Street',
         'customer_number' => '234567890',
@@ -90,7 +90,7 @@ $orders = [
         'state_payment' => true
     ],
     [
-        'customer_name' => 'David',
+        'customer_name' => 'Mauro',
         'customer_surname' => 'Brown',
         'customer_address' => '321 Pine Street',
         'customer_number' => '234567890',
@@ -98,7 +98,7 @@ $orders = [
         'state_payment' => true
     ],
     [
-        'customer_name' => 'David',
+        'customer_name' => 'Antonio',
         'customer_surname' => 'Brown',
         'customer_address' => '321 Pine Street',
         'customer_number' => '234567890',
@@ -114,7 +114,7 @@ $orders = [
         'state_payment' => true
     ],
     [
-        'customer_name' => 'Sophia',
+        'customer_name' => 'Priscilla',
         'customer_surname' => 'Miller',
         'customer_address' => '987 Cedar Street',
         'customer_number' => '876543210',
@@ -162,7 +162,7 @@ $orders = [
         'state_payment' => true
     ],
     [
-        'customer_name' => 'Mia',
+        'customer_name' => 'Anna',
         'customer_surname' => 'Thomas',
         'customer_address' => '753 Hickory Street',
         'customer_number' => '456789012',
@@ -186,7 +186,7 @@ $orders = [
         'state_payment' => true
     ],
     [
-        'customer_name' => 'William',
+        'customer_name' => 'Fausto',
         'customer_surname' => 'Gonzalez',
         'customer_address' => '753 Poplar Street',
         'customer_number' => '123456789',
@@ -194,7 +194,7 @@ $orders = [
         'state_payment' => true
     ],
     [
-        'customer_name' => 'Amelia',
+        'customer_name' => 'Orazio',
         'customer_surname' => 'Perez',
         'customer_address' => '951 Willow Street',
         'customer_number' => '234567890',
@@ -210,7 +210,7 @@ $orders = [
         'state_payment' => true
     ],
     [
-        'customer_name' => 'Amelia',
+        'customer_name' => 'Gertrude',
         'customer_surname' => 'Perez',
         'customer_address' => '951 Willow Street',
         'customer_number' => '234567890',
@@ -226,7 +226,7 @@ $orders = [
         'state_payment' => true
     ],
     [
-        'customer_name' => 'Benjamin',
+        'customer_name' => 'Franco',
         'customer_surname' => 'Sanchez',
         'customer_address' => '357 Mulberry Street',
         'customer_number' => '345678901',
