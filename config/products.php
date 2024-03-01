@@ -79,7 +79,7 @@ $products = [
     'type_id' => 5,
     'price' => 7.99,
     'visibility' => true,
-    'restaurant_id' => 3
+    'restaurant_id' => 14
   ],
   [
     'name' => 'Fries',
@@ -89,7 +89,7 @@ $products = [
     'type_id' => 2,
     'price' => 3.49,
     'visibility' => true,
-    'restaurant_id' => 3
+    'restaurant_id' => 14
   ],
   [
     'name' => 'Hot Dog',
@@ -99,7 +99,7 @@ $products = [
     'type_id' => 5,
     'price' => 4.99,
     'visibility' => true,
-    'restaurant_id' => 3
+    'restaurant_id' => 14
   ],
   [
     'name' => 'Pizza Margherita',
@@ -109,7 +109,7 @@ $products = [
     'type_id' => 4,
     'price' => 9.99,
     'visibility' => true,
-    'restaurant_id' => 4
+    'restaurant_id' => 3
   ],
   [
     'name' => 'Pizza Pepperoni',
@@ -119,7 +119,7 @@ $products = [
     'type_id' => 4,
     'price' => 10.99,
     'visibility' => true,
-    'restaurant_id' => 4
+    'restaurant_id' => 3
   ],
   [
     'name' => 'Pizza Vegetariana',
@@ -129,7 +129,7 @@ $products = [
     'type_id' => 4,
     'price' => 11.99,
     'visibility' => true,
-    'restaurant_id' => 4
+    'restaurant_id' => 3
   ],
   [
     'name' => 'Sushi Misto',
@@ -149,7 +149,7 @@ $products = [
     'type_id' => 2,
     'price' => 12.99,
     'visibility' => true,
-    'restaurant_id' => 12
+    'restaurant_id' => 7
   ],
   [
     'name' => 'Taco di pollo',
@@ -159,7 +159,7 @@ $products = [
     'type_id' => 1,
     'price' => 6.99,
     'visibility' => true,
-    'restaurant_id' => 7
+    'restaurant_id' => 10
   ],
   [
     'name' => 'Insalata di Stagione',
@@ -169,7 +169,7 @@ $products = [
     'type_id' => 2,
     'price' => 6.99,
     'visibility' => true,
-    'restaurant_id' => 7
+    'restaurant_id' => 8
   ],
   [
     'name' => 'Gelato alla Vaniglia',
@@ -179,7 +179,7 @@ $products = [
     'type_id' => 3,
     'price' => 4.99,
     'visibility' => true,
-    'restaurant_id' => 8
+    'restaurant_id' =>11
   ],
   [
     'name' => 'Tiramisù',
@@ -189,7 +189,7 @@ $products = [
     'type_id' => 3,
     'price' => 5.99,
     'visibility' => true,
-    'restaurant_id' => 8
+    'restaurant_id' => 11
   ],
   [
     'name' => 'Birra Artigianale',
@@ -199,7 +199,7 @@ $products = [
     'type_id' => 7,
     'price' => 4.99,
     'visibility' => true,
-    'restaurant_id' => 9
+    'restaurant_id' => 4
   ],
   [
     'name' => 'Vino Rosso',
@@ -209,7 +209,7 @@ $products = [
     'type_id' => 6,
     'price' => 12.99,
     'visibility' => true,
-    'restaurant_id' => 10
+    'restaurant_id' => 9
   ],
   [
     'name' => 'Bibita Gassata',
@@ -219,7 +219,7 @@ $products = [
     'type_id' => 8,
     'price' => 1.99,
     'visibility' => true,
-    'restaurant_id' => 11
+    'restaurant_id' => 2
   ],
   [
     'name' => 'Bibita Analcolica',
@@ -228,6 +228,26 @@ $products = [
     'description' => 'Bibita analcolica rinfrescante.',
     'type_id' => 8,
     'price' => 2.49,
+    'visibility' => true,
+    'restaurant_id' => 5
+  ],
+  [
+    'name' => 'Kebab Misto',
+    'image' => 'img/products/kebab-misto.png',
+    'ingredients' => 'Carne di pollo e manzo, pane pita, insalata, salsa',
+    'description' => 'Kebab misto con carne di pollo e manzo.',
+    'type_id' => 5,
+    'price' => 7.99,
+    'visibility' => true,
+    'restaurant_id' => 12
+  ],
+  [
+    'name' => 'Kebab Manzo',
+    'image' => 'img/products/kebab-manzo.png',
+    'ingredients' => 'Carne di pollo e manzo, pane pita, insalata, salsa',
+    'description' => 'Kebab misto con carne di pollo e manzo.',
+    'type_id' => 5,
+    'price' => 5.99,
     'visibility' => true,
     'restaurant_id' => 12
   ],
@@ -239,7 +259,7 @@ $products = [
     'type_id' => 5,
     'price' => 7.99,
     'visibility' => true,
-    'restaurant_id' => 9
+    'restaurant_id' => 6
   ],
   [
     'name' => 'Kebab Manzo',
@@ -249,27 +269,7 @@ $products = [
     'type_id' => 5,
     'price' => 5.99,
     'visibility' => true,
-    'restaurant_id' => 9
-  ],
-  [
-    'name' => 'Kebab Misto',
-    'image' => 'img/products/kebab-misto.png',
-    'ingredients' => 'Carne di pollo e manzo, pane pita, insalata, salsa',
-    'description' => 'Kebab misto con carne di pollo e manzo.',
-    'type_id' => 5,
-    'price' => 7.99,
-    'visibility' => true,
-    'restaurant_id' => 11
-  ],
-  [
-    'name' => 'Kebab Manzo',
-    'image' => 'img/products/kebab-manzo.png',
-    'ingredients' => 'Carne di pollo e manzo, pane pita, insalata, salsa',
-    'description' => 'Kebab misto con carne di pollo e manzo.',
-    'type_id' => 5,
-    'price' => 5.99,
-    'visibility' => true,
-    'restaurant_id' => 11
+    'restaurant_id' => 6
   ],
   [
     'name' => 'Pad Thai',
@@ -279,7 +279,7 @@ $products = [
     'type_id' => 1,
     'price' => 10.99,
     'visibility' => true,
-    'restaurant_id' => 10
+    'restaurant_id' => 13
   ],
   [
     'name' => 'Bistecca di Manzo',
@@ -289,7 +289,7 @@ $products = [
     'type_id' => 2,
     'price' => 19.99,
     'visibility' => true,
-    'restaurant_id' => 5
+    'restaurant_id' => 9
   ],
   [
     'name' => 'Insalata di Mare',
@@ -299,7 +299,7 @@ $products = [
     'type_id' => 2,
     'price' => 12.99,
     'visibility' => true,
-    'restaurant_id' => 6
+    'restaurant_id' => 5
   ]
 ];
 return ($products);
