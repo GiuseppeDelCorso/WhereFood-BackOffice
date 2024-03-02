@@ -1,10 +1,12 @@
 <?php
 
+use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\RestaurantController;
 use App\Http\Controllers\Api\ProductControllerController;
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +30,9 @@ Route::get('restaurants/{restaurant_id}/products', [ProductController::class, "i
 
 // Rotte per filtrare i ristoranti in base alle categorie
 Route::get('restaurants/categories/{category_id}', [RestaurantController::class, "filterByCategory"]);
+
+// Rotte per visualizzare l'elenco delle categorie
+Route::get('categories', [CategoryController::class, "index"]);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
