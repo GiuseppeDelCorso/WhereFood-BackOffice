@@ -39,9 +39,20 @@
                             <div class="text-center mb-4">
                                 <div class="text-white mt-2">
                                     <em>Benvenuto/a, {{ Auth::user()->name }}</em>
-                                    <h5>Ristorante: {{ $restaurant->name }}</h5>
+                                    <div>
+                                        <h5>Ristorante:
+                                            @php
+                                                $data = DB::table('users')
+                                                    ->join('restaurants', 'users.id', '=', 'restaurants.user_id')
+                                                    ->select('restaurants.name')
+                                                    ->where('users.id', Auth::user()->id)
+                                                    ->get();
+                                                $nome = $data[0]->name;
+                                            @endphp
+                                            {{ $nome }}
+                                        </h5>
+                                    </div>
                                 </div>
-
                                 <div class="nav-item">
                                     <a class="nav-link text-white" href="{{ route('logout') }}"
                                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
