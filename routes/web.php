@@ -22,7 +22,7 @@ Route::middleware(['auth'])
         // - il percorso "/" diventa "admin/"
         // - il nome della rotta ->name("dashboard") diventa ->name("admin.dashboard")
         Route::get('/', [RestaurantController::class, 'index'])->name('admin.restaurant.index');
-
+        Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.show');
         Route::resource('restaurants', RestaurantController::class);
         Route::resource('categories', CategoryController::class);
         Route::resource('products', ProductController::class);

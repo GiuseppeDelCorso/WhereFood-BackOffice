@@ -17,21 +17,23 @@ class OrderController extends Controller
      */
     public function index()
     {
+
+
         $loggedUserId = Auth::user()->id;
-    
+
         $restaurantId = Restaurant::where('user_id', $loggedUserId)->value('id');
 
         $orders = Order::whereHas('products', function ($query) use ($restaurantId) {
-                $query->where('restaurant_id', $restaurantId);
-            })
+            $query->where('restaurant_id', $restaurantId);
+        })
             ->with('products')
             ->get();
 
         $categories = Category::all();
-        
+
         return view("admin.orders.index", compact("categories", "orders"));
     }
-    
+
     /**
      * Show the form for creating a new resource.
      */
@@ -51,9 +53,10 @@ class OrderController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Order $order)
+    public function show($id)
     {
-        //
+        $order = Order::findOrFail($id);
+        return view('admin.orders.show', compact('order'));
     }
 
     /**

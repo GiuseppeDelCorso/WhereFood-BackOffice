@@ -45,7 +45,6 @@ class RestaurantController extends Controller
      */
     public function show(Restaurant $restaurant)
     {
-        //
     }
 
     /**

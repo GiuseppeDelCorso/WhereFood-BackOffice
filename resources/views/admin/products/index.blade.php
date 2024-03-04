@@ -3,7 +3,7 @@
 @section('content')
     <div class="container-fluid mt-4">
         <div class="row justify-content-center">
-            {{-- Crea card per prodotti --}}
+            
             @foreach ($products as $product)
                 <div class="col-md-4">
                     <div class="card bgCard">
@@ -37,7 +37,7 @@
                     </div>
                 </div>
 
-                <!-- Modale di conferma per questo prodotto -->
+                
                 <div class="modal fade" id="confirmDeleteModal{{$product->id}}" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel{{$product->id}}" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
