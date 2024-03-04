@@ -9,6 +9,8 @@ use App\Http\Controllers\Admin\TypeController; // <---- Importare il controller 
 use App\Http\Controllers\Admin\ProductController; // <---- Importare il controller da usare!!
 /* ... */
 
+Route::get('/stats')->name('stats');
+
 Route::get('/', function () {
     return view('welcome');
 });

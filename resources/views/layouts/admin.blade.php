@@ -98,7 +98,12 @@
                                     <i class="fa-solid fa-cart-arrow-down fa-lg fa-fw"></i> Riepilogo Ordini
                                 </a>
                             </li>
-
+                            <li class="nav-item">
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'stats' ? 'bg-secondary' : '' }}"
+                                    href="{{ route('stats') }}">
+                                    <i class="fa-solid fa-chart-line"></i> Statistiche
+                                </a>
+                            </li>
                         </ul>
 
                     </div>
