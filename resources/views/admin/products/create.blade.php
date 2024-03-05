@@ -17,7 +17,7 @@
         <div class="row">
             <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                
+
                 <div class="mb-3">
                     <label for="name" class="form-label">Nome (*)</label>
                     <input type="text" class="form-control @error('name') is-invalid @enderror" id="name"
@@ -34,7 +34,7 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-                <div class="mb-3">
+                {{--            <div class="mb-3">
                     <label for="ingredients" class="form-label">Ingredienti</label>
                     <input type="text" class="form-control @error('ingredients') is-invalid @enderror" id="ingredients"
                         name="ingredients" value="{{ old('ingredients') }}">
@@ -42,14 +42,34 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
+ --}}
+                {{-- Ingredienti FATTO CON TEXTAREA --}}
                 <div class="mb-3">
+                    <div class="form-floating">
+                        <textarea class="form-control @error('ingredients') is-invalid @enderror" id="ingredients" name="ingredients"
+                            value="" placeholder="Leave a comment here" id="ingredients" style="height: 100px">{{ old('ingredients') }}</textarea>
+                        <label for="ingredients">Ingredienti</label>
+                    </div>
+                </div>
+
+                {{--          <div class="mb-3">
                     <label for="description" class="form-label">Descrizione</label>
                     <input type="text" class="form-control @error('description') is-invalid @enderror" id="description"
                         name="description" value="{{ old('description') }}">
                     @error('description')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
+                </div> --}}
+
+                {{-- Descrizione FATTO CON TEXTAREA --}}
+                <div class="mb-3">
+                    <div class="form-floating">
+                        <textarea class="form-control @error('description') is-invalid @enderror" id="description" name="description"
+                            value="" placeholder="Leave a comment here" id="description" style="height: 100px">{{ old('description') }}</textarea>
+                        <label for="description">Descrizione</label>
+                    </div>
                 </div>
+
                 <div class="mb-3">
                     <label for="type_id" class="form-label">Tipo di prodotto</label>
                     <select name="type_id" id="" class="form-select">
@@ -61,8 +81,9 @@
                 </div>
                 <div class="mb-3">
                     <label for="price" class="form-label">Prezzo (*)</label>
-                    <input type="number" min="0.00" max="10000.00" step="0.01" class="form-control @error('price') is-invalid @enderror" id="price"
-                        name="price" value="{{ old('price') }}" required>
+                    <input type="number" min="0.00" max="10000.00" step="0.01"
+                        class="form-control @error('price') is-invalid @enderror" id="price" name="price"
+                        value="{{ old('price') }}" required>
                     @error('price')
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
