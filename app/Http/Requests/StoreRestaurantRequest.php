@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\File;
 
 class StoreRestaurantRequest extends FormRequest
 {
@@ -11,7 +12,7 @@ class StoreRestaurantRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,11 +23,11 @@ class StoreRestaurantRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "business_name" => ["required", "min:5", "max:255"],
+            "name" => ["required", "min:5", "max:255"],
+            "image" => ["", File::image()->max("2mb")],
             "address" => ["required", "min:5", "max:255"],
-            "P_IVA" => ["required", ""],
-            "phone" => ["required", "min:5", "max:255"],
-            "types" => []
+            "PIVA" => ["required", "max:11"],
+            "categories" => ["required"]
         ];
     }
 }

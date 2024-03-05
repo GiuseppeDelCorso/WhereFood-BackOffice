@@ -27,7 +27,7 @@ class UpdateRestaurantRequest extends FormRequest
             "image" => ["", File::image()->max("2mb")],
             "address" => ["required", "min:5", "max:255"],
             "PIVA" => ["required", "max:11"],
-            "categories" => []
+            "categories" => ["required"]
         ];
     }
 }

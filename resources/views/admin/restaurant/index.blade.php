@@ -28,6 +28,12 @@
                 </div>
                 <div class="mb-3">
                     <label for="image" class="form-label">Immagine del ristorante</label>
+                    <div>
+                        @if ($restaurant->image)
+                            <img class="postcard__img img_restaurant mb-1"
+                                src="{{ asset('storage/' . $restaurant->image) }}" alt="{{ $restaurant->image }}">
+                        @endif
+                    </div>
                     <input type="file" class="form-control @error('image') is-invalid @enderror" id="image"
                         name="image" placeholder="Inserisci l'immagine del prodotto"
                         value="{{ old('image') ?? $restaurant->image }}">
@@ -51,8 +57,10 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-                <div class="mb-3">
-                    <label for="tag" class="form-label">Categorie</label>
+
+                {{-- CATEGORIE CON MULTISELECT --}}
+                {{-- <div class="mb-3">
+                    <label for="tag" class="form-label">Categorie(*)</label>
                     <select class="form-select" name="categories[]" id="tags" multiple>
                         @foreach ($categories as $category)
                             <option value="{{ $category->id }}"
@@ -61,6 +69,35 @@
                             </option>
                         @endforeach
                     </select>
+                </div> --}}
+
+                {{-- CATEGORIE CON CHECKBOX --}}
+                {{-- @foreach ($categories as $category)
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="{{ $category->id }}"
+                            {{ $restaurant->categories->contains($category->id) ? 'checked' : '' }} name="categories[]"
+                            id="tag_{{ $category->id }}">
+                        <label class="form-check-label" for="tag_{{ $category->id }}">
+                            {{ $category->name }}
+                        </label>
+                    </div>
+                @endforeach --}}
+
+                {{-- CATEGORIE CON CHECKBOX STILIZZATA --}}
+                <div class="mb-3">
+                    <label for="categories" class="form-label">Categorie(*)</label>
+                    <div>
+                        @foreach ($categories as $category)
+                            <div class="btn-group mb-1" role="group" aria-label="Basic checkbox toggle button group">
+                                <input type="checkbox" class="btn-check" id="category_{{ $category->id }}"
+                                    autocomplete="on" value="{{ $category->id }}"
+                                    {{ $restaurant->categories->contains($category->id) ? 'checked' : '' }}
+                                    name="categories[]">
+                                <label class="btn btn-outline-primary"
+                                    for="category_{{ $category->id }}">{{ $category->name }}</label>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
 
                 <!-- Button Aggiungi/Modifica ristorante con modal  -->
@@ -88,3 +125,9 @@
         </div>
     </div>
 @endsection
+
+<style>
+    .img_restaurant {
+        width: 50px;
+    }
+</style>
