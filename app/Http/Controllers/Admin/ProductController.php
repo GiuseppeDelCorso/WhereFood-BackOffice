@@ -32,6 +32,12 @@ class ProductController extends Controller
      */
     public function create()
     {
+        $loggeduser = Auth::user()->id;
+        $restaurantID = DB::table('restaurants')->where('user_id', $loggeduser)->value('id');
+        $restaurant = Restaurant::select("name")->where("id", $restaurantID)->first();
+        if (!$restaurant->name) {
+            return view("admin.errors.error");
+        }
         $types = Type::all();
         return view("admin.products.create", compact("types"));
     }
