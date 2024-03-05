@@ -30,6 +30,12 @@
 
                 <div class="mb-3">
                     <label for="image" class="form-label">Immagine del prodotto</label>
+                    <div>
+                        @if ($product->image)
+                            <img class="postcard__img img_product mb-1"
+                                src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->image }}">
+                        @endif
+                    </div>
                     <input type="file" class="form-control @error('image') is-invalid @enderror" id="image"
                         name="image" placeholder="Inserisci l'immagine del prodotto"
                         value="{{ old('image') ?? $product->image }}">
@@ -94,3 +100,9 @@
         </div>
     </div>
 @endsection
+
+<style>
+    .img_product {
+        width: 50px;
+    }
+</style>
