@@ -15,7 +15,7 @@ class OrderController extends Controller
             'customer_surname' => 'required|string',
             'customer_address' => 'required|string',
             'customer_number' => 'required|string',
-            'total_order' => 'string',
+            'total_order' => 'required|numeric|between:0,99.99',
             'state_payment' => 'boolean',
         ]);
 
