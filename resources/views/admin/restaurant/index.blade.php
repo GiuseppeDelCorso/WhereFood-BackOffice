@@ -93,7 +93,7 @@
                                     autocomplete="on" value="{{ $category->id }}"
                                     {{ $restaurant->categories->contains($category->id) ? 'checked' : '' }}
                                     name="categories[]">
-                                <label class="btn btn-outline-primary"
+                                <label class="btnCategory"
                                     for="category_{{ $category->id }}">{{ $category->name }}</label>
                             </div>
                         @endforeach
@@ -101,7 +101,7 @@
                 </div>
 
                 <!-- Button Aggiungi/Modifica ristorante con modal  -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <button type="button" class="btnConfirm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     {{ $restaurant->name ? 'Modifica Ristorante' : 'Aggiungi Ristorante' }}
                 </button>
                 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
@@ -127,7 +127,47 @@
 @endsection
 
 <style>
+
+    main{
+        background-color: #000000;
+    }
+    input{
+        background: transparent !important;
+        color: white !important;
+    }
+    .btnConfirm {
+    background-color: rgb(71, 71, 71);
+    color: white;
+    border-radius: 7px;
+    padding: 5px;
+    }
+    .btnConfirm:hover{
+
+        background-color: rgb(161, 159, 159);
+    }
+    .btnCategory {
+    background-color: rgb(71, 71, 71);
+    color: white;
+    border: 2px solid #a2ff64;
+    border-radius: 7px;
+    padding: 5px;
+    }
+    .btn-Click {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+}
+.btn-check:checked + .btnCategory, :not(.btn-check) + .btn:active, .btn:first-child:active, .btn.active, .btn.show {
+    color: rgb(56, 56, 56) !important;
+    background-color: #a2ff64;
+    border-color: var(--bs-btn-active-border-color);
+    border-style: none;
+    padding: 7px;
+}
     .img_restaurant {
         width: 50px;
+    }
+    .form-label{
+        color: rgb(194, 191, 191) !important;
     }
 </style>
