@@ -26,10 +26,10 @@
     <div id="app">
 
 
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-black shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-                    <div class="logo">
+                    <div class="logo py-3">
                         <img src="/storage/welcome-img/WHEREFOOD.png" alt="Logo">
                     </div>
                     {{-- config('app.name', 'Laravel') --}}
@@ -66,7 +66,7 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('admin.restaurants.index') }}">{{__('Inserisci/modifica dati del ristorante')}}</a>
+                                <a class="dropdown-item" href="{{ route('admin.restaurants.index') }}">{{__('Dashboard')}}</a>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
@@ -88,17 +88,22 @@
         </main>
     </div>
 </body>
-
-<style>
-    nav {
-        font-family: Arial, Helvetica, sans-serif;
-    }
-</style>
-
 </html>
 
-<style>
-    .wherefood_logo img{
-        width: 200px;
+<style scoped lang="scss">
+    .logo img{
+        width: 300px;
+    }
+
+    #navbarDropdown{
+        font-size: 1.2rem;
+    }
+
+    a{
+        color: white !important;
+    }
+
+    .dropdown-item{
+        color: black !important;
     }
 </style>
